@@ -236,7 +236,7 @@ df["snippet_short"] = df["snippet"].fillna("").apply(
 df_visual = df.rename(columns={
     "detected_deadline": "Fecha límite",
     "days_remaining": "Días restantes",
-    "convocatoria": "Convocatoria",   # CAMBIO AQUÍ
+    "source": "Convocatoria",   # <-- CAMBIO AQUÍ
     "title": "Título",
     "snippet_short": "Descripción",
     "url": "Enlace"
@@ -255,12 +255,6 @@ st.dataframe(
         "Enlace"
     ]],
     column_config={
-        "Urgencia": st.column_config.Column(width="small"),
-        "Fecha límite": st.column_config.DateColumn(width="small"),
-        "Días restantes": st.column_config.NumberColumn(width="small"),
-        "Convocatoria": st.column_config.Column(width="medium"),
-        "Título": st.column_config.Column(width="large"),
-        "Descripción": st.column_config.Column(width="large"),
         "Enlace": st.column_config.LinkColumn(
             "Convocatoria",
             display_text="🔗 Ver"
