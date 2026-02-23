@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import hashlib
-from os import name
+
 import re
 import sqlite3
 from dataclasses import dataclass
@@ -19,17 +19,9 @@ import feedparser
 
 import smtplib
 import argparse
-from email.message import EmailMessage
-from dotenv import load_dotenv
 import os
+from email.mime.text import MIMEText
 
-
-import os
-
-sender = os.getenv("EMAIL_USER")
-password = os.getenv("EMAIL_PASS")
-
-server.login(sender, password)
 
 
 @dataclass
@@ -144,7 +136,7 @@ def fetch_html(url: str, user_agent: str, timeout_seconds: int) -> str:
     r = requests.get(
         url,
         headers={"User-Agent": user_agent},
-        timeout=timeout_seconds,
+        timeout=min(timeout_seconds, 20)
     )
     r.raise_for_status()
     return r.text
@@ -348,65 +340,44 @@ def main() -> None:
     init_db(conn)
 
     all_items: List[Item] = []
+
     for src in srcs["sources"]:
         name = src["name"]
         typ = src["type"]
         url = src["url"]
         include_if = src.get("include_if_url_contains")
 
-        if typ == "html":
-            try:
-                html = fetch_html(url, s["user_agent"], s["timeout_seconds"])
-            except requests.exceptions.HTTPError as e:
-                print(f"[ERROR] {name}: {e}")
-                continue
-            except Exception as e:
-                print(f"[WARN] {name}: {e}")
-                continue
-            items = parse_html_source(
-                source_name=name,
-                base_url=url,
-                html=html,
-                include_if_url_contains=include_if,
-                keywords_es=keywords_es,
-                keywords_en=keywords_en,
-                max_items=s["max_items_per_source"],
-                user_agent=s["user_agent"],
-                timeout_seconds=s["timeout_seconds"],
-            )
-
-        elif typ == "rss":
-            items = parse_rss_source(
-                source_name=name,
-                url=url,
-                keywords_es=keywords_es,
-                keywords_en=keywords_en,
-                max_items=s["max_items_per_source"],
-            )
-        else:
-            print(f"Unknown source type: {typ}")
-            continue
-
-
-        # if typ != "html":
-        #     # v1 only html; rss can be added next
-        #     continue
-
         try:
-            html = fetch_html(url, s["user_agent"], s["timeout_seconds"])
-            items = parse_html_source(
-                source_name=name,
-                base_url=url,
-                html=html,
-                include_if_url_contains=include_if,
-                keywords_es=keywords_es,
-                keywords_en=keywords_en,
-                max_items=s["max_items_per_source"],
-                user_agent=s["user_agent"],
-                timeout_seconds=s["timeout_seconds"],
-            )
+            if typ == "html":
+                html = fetch_html(url, s["user_agent"], s["timeout_seconds"])
+                items = parse_html_source(
+                    source_name=name,
+                    base_url=url,
+                    html=html,
+                    include_if_url_contains=include_if,
+                    keywords_es=keywords_es,
+                    keywords_en=keywords_en,
+                    max_items=s["max_items_per_source"],
+                    user_agent=s["user_agent"],
+                    timeout_seconds=s["timeout_seconds"],
+                )
+
+            elif typ == "rss":
+                items = parse_rss_source(
+                    source_name=name,
+                    url=url,
+                    keywords_es=keywords_es,
+                    keywords_en=keywords_en,
+                    max_items=s["max_items_per_source"],
+                )
+
+            else:
+                print(f"Unknown source type: {typ}")
+                continue
+
             all_items.extend(items)
             print(f"[OK] {name}: {len(items)} items")
+
         except Exception as e:
             print(f"[WARN] {name}: {e}")
 
@@ -414,10 +385,12 @@ def main() -> None:
     cleanup_old(conn, s["only_keep_days"])
     df = export_csv(conn, out_csv)
     write_digest(df, out_md)
+    conn.close()
 
     print(f"\nDone. Inserted new: {inserted}")
     print(f"CSV: {out_csv}")
     print(f"Digest: {out_md}")
+
 
 
 
@@ -439,15 +412,7 @@ def parse_rss_source(source_name, url, keywords_es, keywords_en, max_items):
         if not any(k in content for k in kws):
             continue
 
-        # detected_deadline = extract_deadline(summary or title) #JO
         detected_deadline = extract_deadline(summary or title)
-        if not detected_deadline:
-            detected_deadline = fetch_deadline_from_page(
-                link, 
-                ["user_agent"], 
-                ["timeout_seconds"]
-        )
-
 
         detected_language = guess_lang(content)
 
@@ -466,30 +431,27 @@ def parse_rss_source(source_name, url, keywords_es, keywords_en, max_items):
     return items
 
 
+# simple email sending with SMTP; can be enhanced with templates, HTML formatting, etc.
+def send_email_digest(filepath, recipients):
 
-def send_email_digest(digest_path, recipients):
-    load_dotenv()
+    sender = os.getenv("EMAIL_USER")
+    password = os.getenv("EMAIL_PASS")
 
-    sender = os.getenv("EMAIL_ADDRESS")
-    password = os.getenv("EMAIL_PASSWORD")
-    smtp_server = os.getenv("SMTP_SERVER")
-    smtp_port = int(os.getenv("SMTP_PORT"))
+    if not sender or not password:
+        raise ValueError("EMAIL_USER or EMAIL_PASS not set in environment")
 
-    with open(digest_path, "r", encoding="utf-8") as f:
+    with open(filepath, "r", encoding="utf-8") as f:
         body = f.read()
 
-    msg = EmailMessage()
-    msg["Subject"] = "Weekly Funding Calls Digest"
+    msg = MIMEText(body, "plain", "utf-8")
+    msg["Subject"] = "Resumen semanal de convocatorias"
     msg["From"] = sender
     msg["To"] = ", ".join(recipients)
-    msg.set_content(body)
 
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
         server.login(sender, password)
-        server.send_message(msg)
-
-    print("[EMAIL SENT] Digest delivered.")
+        server.sendmail(sender, recipients, msg.as_string())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -499,6 +461,5 @@ if __name__ == "__main__":
     main()
 
     if args.send_email:
-        load_dotenv()
-        recipients = [os.getenv("EMAIL_ADDRESS")]
+        recipients = [os.getenv("EMAIL_USER")]
         send_email_digest("data/digest.md", recipients)
