@@ -225,14 +225,20 @@ k2.metric("Convocatorias vigentes", num_vigentes)
 k3.metric("Sin fecha límite", int(sin_fecha))
 
 # =========================
-# TABLA PRINCIPAL
+# TABLA PRINCIPAL (COMPACTA)
 # =========================
+
+# Reducir longitud de descripción
+df["snippet_short"] = df["snippet"].fillna("").apply(
+    lambda x: x[:120] + "..." if len(x) > 120 else x
+)
+
 df_visual = df.rename(columns={
     "detected_deadline": "Fecha límite",
     "days_remaining": "Días restantes",
-    "source": "Entidad convocante",
+    "convocatoria": "Convocatoria",   # CAMBIO AQUÍ
     "title": "Título",
-    "snippet": "Descripción",
+    "snippet_short": "Descripción",
     "url": "Enlace"
 })
 
@@ -240,26 +246,31 @@ st.markdown("## Convocatorias")
 
 st.dataframe(
     df_visual[[
-        "Prioridad",
         "Urgencia",
         "Fecha límite",
         "Días restantes",
-        "Entidad convocante",
+        "Convocatoria",
         "Título",
         "Descripción",
         "Enlace"
     ]],
     column_config={
+        "Urgencia": st.column_config.Column(width="small"),
+        "Fecha límite": st.column_config.DateColumn(width="small"),
+        "Días restantes": st.column_config.NumberColumn(width="small"),
+        "Convocatoria": st.column_config.Column(width="medium"),
+        "Título": st.column_config.Column(width="large"),
+        "Descripción": st.column_config.Column(width="large"),
         "Enlace": st.column_config.LinkColumn(
             "Convocatoria",
-            display_text="🔗 Ver convocatoria"
+            display_text="🔗 Ver"
         )
     },
     hide_index=True,
     width="stretch",
 )
 
-st.caption("⭐ Prioridad estratégica | 🔴 ≤14 días | 🟡 ≤30 días | 🟢 >30 días")
+st.caption("🔴 ≤14 días | 🟡 ≤30 días | 🟢 >30 días")
 
 # =========================
 # GRÁFICO POR ÁREA
