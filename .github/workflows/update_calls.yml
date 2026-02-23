@@ -2,8 +2,11 @@ name: Weekly Funding Update
 
 on:
   schedule:
-    - cron: "0 14 * * 1"   # Lunes 8am México (UTC-6 → 14 UTC)
+    - cron: "0 14 * * 1"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-data:
