@@ -12,7 +12,7 @@ load_dotenv()
 
 def check_password():
     def password_entered():
-        if st.session_state["password"] == os.getenv("APP_PASSWORD"):
+        if st.session_state["password"] == st.secrets("APP_PASSWORD"):
             st.session_state["password_correct"] = True
             del st.session_state["password"]
         else:
