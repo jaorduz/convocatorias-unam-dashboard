@@ -1,0 +1,29 @@
+keywords:
+  es:
+    - convocatoria
+    - financiamiento
+    - financiamiento
+    - fondos
+    - beca
+    - apoyo
+    - subsidio
+    - estímulo
+    - investigación
+    - proyectos
+  en:
+    - call for proposals
+    - funding
+    - grant
+    - fellowship
+    - research funding
+    - program
+    - deadline
+
+settings:
+  user_agent: "CallsMonitorBot/1.0 (contact: you@example.com)"
+  timeout_seconds: 20
+  max_items_per_source: 40
+  only_keep_days: 365
+  output_csv: "data/calls.csv"
+  output_md: "data/digest.md"
+  sqlite_path: "data/calls.db"

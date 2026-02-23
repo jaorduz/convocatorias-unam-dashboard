@@ -1,0 +1,79 @@
+sources:
+
+  # 🇲🇽 Mexico
+
+  - name: "CONAHCYT Convocatorias"
+    type: "html"
+    url: "https://conahcyt.mx/convocatorias/"
+    include_if_url_contains: ["convocatoria", "beca", "apoyo", "programa"]
+
+  - name: "DGAPA UNAM Convocatorias"
+    type: "html"
+    # url: "https://dgapa.unam.mx/index.php/programas"
+    url: "https://dgapa.unam.mx/index.php/convocatorias-y-resultados"
+    include_if_url_contains: ["convoc", "programa", "apoyo"]
+
+  - name: "TecNM Convocatorias"
+    type: "html"
+    url: "https://www.tecnm.mx/convocatorias"
+    include_if_url_contains: ["convocatoria", "programa", "apoyo"]
+
+  - name: "COMECYT Convocatorias"
+    type: "html"
+    url: "https://comecyt.edomex.gob.mx/convocatorias"
+    include_if_url_contains: ["convocatoria","apoyo","beca"]
+
+  - name: "RENIECYT"
+    type: "html"
+    url: "https://conahcyt.mx/reniecyt/"
+    include_if_url_contains: ["registro","convocatoria","reniecyt"]  
+
+  # 🌎 International
+
+  - name: "NSF Funding Opportunities"
+    type: "html"
+    url: "https://www.nsf.gov/funding/opportunities.jsp"
+    include_if_url_contains: ["solicitation", "funding", "deadline"]
+
+  - name: "Horizon Europe Funding"
+    type: "html"
+    url: "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search"
+    include_if_url_contains: ["topic", "call", "deadline"]
+
+  - name: "NIH Funding"
+    type: "html"
+    url: "https://grants.nih.gov/grants/guide/index.html"
+    include_if_url_contains: ["notice", "funding", "deadline"]
+
+    
+  - name: "NSF RSS"
+    type: "rss"
+    url: "https://www.nsf.gov/rss/rss_funding.xml"
+
+  - name: "NIH RSS"
+    type: "rss"
+    url: "https://grants.nih.gov/grants/guide/rss.xml"
+
+  - name: "UNESCO Call for Proposals (Articles)"
+    type: "html"
+    url: "https://www.unesco.org/en/articles/call-proposals"
+    include_if_url_contains: ["call", "proposal", "apply", "fund", "grant"]
+
+  - name: "UNESCO IFCD Apply for Funding"
+    type: "html"
+    url: "https://www.unesco.org/creativity/en/ifcd/apply"
+    include_if_url_contains: ["apply", "fund", "call", "applications"]
+
+  - name: "UNESCO-UNEVOC RSS"
+    type: "rss"
+    url: "http://www.unevoc.unesco.org/unevoc_rss.xml"
+
+  - name: "OAS Scholarships"
+    type: "html"
+    url: "https://www.oas.org/en/scholarships/"
+    include_if_url_contains: ["scholar", "application", "deadline", "call"]
+
+  - name: "OAS Procurement Notices (RFPs)"
+    type: "html"
+    url: "https://www.oas.org/OASpage/bid/"
+    include_if_url_contains: ["rfp", "proposal", "bid", "request"]
