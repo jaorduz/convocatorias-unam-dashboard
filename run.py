@@ -24,6 +24,14 @@ from dotenv import load_dotenv
 import os
 
 
+import os
+
+sender = os.getenv("EMAIL_USER")
+password = os.getenv("EMAIL_PASS")
+
+server.login(sender, password)
+
+
 @dataclass
 class Item:
     source: str
