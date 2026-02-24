@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 
+from multiprocessing import context
 import re
 import sqlite3
 from dataclasses import dataclass
@@ -22,7 +23,8 @@ import argparse
 import os
 from email.mime.text import MIMEText
 
-
+from dotenv import load_dotenv
+load_dotenv()
 
 @dataclass
 class Item:
@@ -122,6 +124,10 @@ def allow_link(url: str, include_if_url_contains: Optional[List[str]]) -> bool:
     if include_if_url_contains:
         u = url.lower()
         return any(tok.lower() in u for tok in include_if_url_contains)
+    # JO: webscrapping "convocatorias" pages can be tricky to filter by keywords, so we allow if URL contains certain patterns
+    if "/convocatoria" in abs_url.lower():
+        pass
+    # JO: for now we allow all links, but this can be enhanced with more complex logic (e.g. ML-based relevance scoring)
     return True
 
 
@@ -186,12 +192,22 @@ def parse_html_source(
         context = norm_space(f"{text} {parent}")[:800]
 
         cl = context.lower()
-        if not any(k in cl for k in kws):
+        if len(text) <10: #JO: not any(k in cl for k in kws):
             continue
 
         snippet = context[:240]
-        detected_deadline = extract_deadline(context)
+        #detected_deadline = extract_deadline(context)
+        full_text = context
+        try:
+            full_html = fetch_html(abs_url, user_agent, timeout_seconds)
+            full_text = BeautifulSoup(full_html, "html.parser").get_text(" ", strip=True)
+        except Exception:
+            pass
 
+        detected_deadline = extract_deadline(full_text)
+        detected_language = guess_lang(full_text)
+        snippet = full_text[:240]
+        ####
         detected_language = guess_lang(context)
 
         title = text if text else abs_url
