@@ -461,5 +461,11 @@ if __name__ == "__main__":
     main()
 
     if args.send_email:
-        recipients = [os.getenv("EMAIL_USER")]
+        recipients_env = os.getenv("EMAIL_RECIPIENTS")  # siempre definido
+
+        if recipients_env and recipients_env.strip():
+            recipients = [e.strip() for e in recipients_env.split(",") if e.strip()]
+        else:
+            recipients = [os.getenv("EMAIL_USER")]
+
         send_email_digest("data/digest.md", recipients)

@@ -2,9 +2,9 @@ sources:
 
   # 🇲🇽 Mexico
 
-  - name: "CONAHCYT Convocatorias"
+  - name: "Secihti Convocatorias"
     type: "html"
-    url: "https://conahcyt.mx/convocatorias/"
+    url: "https://secihti.mx/convocatorias/"
     include_if_url_contains: ["convocatoria", "beca", "apoyo", "programa"]
 
   - name: "DGAPA UNAM Convocatorias"
@@ -54,10 +54,10 @@ sources:
     type: "rss"
     url: "https://grants.nih.gov/grants/guide/rss.xml"
 
-  - name: "UNESCO Call for Proposals (Articles)"
-    type: "html"
-    url: "https://www.unesco.org/en/articles/call-proposals"
-    include_if_url_contains: ["call", "proposal", "apply", "fund", "grant"]
+  # - name: "UNESCO Call for Proposals (Articles)"
+  #   type: "html"
+  #   url: "https://www.unesco.org/en/articles/call-proposals"
+  #   include_if_url_contains: ["call", "proposal", "apply", "fund", "grant"]
 
   - name: "UNESCO IFCD Apply for Funding"
     type: "html"
