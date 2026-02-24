@@ -391,7 +391,22 @@ def main() -> None:
                 print(f"Unknown source type: {typ}")
                 continue
 
-            all_items.extend(items)
+            #all_items.extend(items)
+            #JO: Filtering by year
+            filtered_items = []
+            today = datetime.now(timezone.utc)
+
+            for it in items:
+                if it.detected_deadline:
+                    try:
+                        deadline_date = datetime.fromisoformat(it.detected_deadline).replace(tzinfo=timezone.utc)
+                        if deadline_date >= today:
+                            filtered_items.append(it)
+                    except Exception:
+                        pass
+            all_items.extend(filtered_items)
+            #JO
+
             print(f"[OK] {name}: {len(items)} items")
 
         except Exception as e:
