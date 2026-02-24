@@ -1,10 +1,14 @@
 # Calls Digest (auto)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Generated: 2026-02-23T14:22:50.582555+00:00
 =======
 Generated: 2026-02-24T16:23:22.951074+00:00
 >>>>>>> 40cd1ed (v1Feb24)
+=======
+Generated: 2026-02-24T16:26:02.360698+00:00
+>>>>>>> 2d40f97 (Remove duplicate parsing block)
 
 ## Upcoming deadlines
 
