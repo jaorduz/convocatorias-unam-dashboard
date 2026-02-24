@@ -1,6 +1,6 @@
 # Calls Digest (auto)
 
-Generated: 2026-02-24T16:47:15.943288+00:00
+Generated: 2026-02-24T17:09:04.192361+00:00
 
 ## Upcoming deadlines
 
@@ -8,89 +8,89 @@ Generated: 2026-02-24T16:47:15.943288+00:00
   Source: UNESCO-UNEVOC RSS  
   Link: https://unevoc.unesco.org/article/Brazil_Workshop_Hackathon.html
 
-- **2026-06-06** — Convenios/Pp U006 Subsidio Federales para Organismos Descentralizados Estatales  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Normateca&des=Transparencia
+- **2025-02-24** — Submit your project to the International Fund for Cultural Diversity’s 2025 cal…  
+  Source: UNESCO IFCD Apply for Funding  
+  Link: https://www.unesco.org/creativity/en/articles/submit-your-project-international-fund-cultural-diversitys-2025-call-applications
 
 
 ## Recently found
 
-- **Deadline:** 2017-10-19 — NEWS: UNESCO-UNEVOC and CONIF organize hackathon training  for Latin American UNEVOC Centres  
-  Source: UNESCO-UNEVOC RSS  
-  Link: https://unevoc.unesco.org/article/Brazil_Workshop_Hackathon.html
+- **Deadline:** — — Annex B - Contractual Terms and Conditions  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 05.25/BID 05.25 Annex B.pdf
 
-- **Deadline:** — — Convocatoria Becas Nacionales para la Formación en CP-SECIHTI 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-becas-nacionales-para-la-formacion-en-cp-secihti-2026/
+- **Deadline:** — — Attachment F  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment F.doc
 
-- **Deadline:** — — NEWS: First UNESCO-UNEVOC Global OER Grant Programme  
-  Source: UNESCO-UNEVOC RSS  
-  Link: https://unevoc.unesco.org/article/First+UNESCO-UNEVOC+Global+OER+Grant+Programme.html
+- **Deadline:** — — Request for Proposals  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 08.25/BID 08.25 Adquisition and Installation of a Boiler.pdf  
 
-- **Deadline:** — — International Fund for Cultural Diversity (IFCD)  
-  Source: UNESCO IFCD Apply for Funding  
-  Link: https://www.unesco.org/creativity/en/international-fund-cultural-diversity
+- **Deadline:** — — RFP Amendment 1  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - Amendment 1.pdf  
 
-- **Deadline:** — — Skip to main content  
-  Source: UNESCO IFCD Apply for Funding  
-  Link: https://www.unesco.org/creativity/en/ifcd/apply#main-content
+- **Deadline:** — — Clarifications  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - Clarifications.pdf  
 
-- **Deadline:** — — Convocatoria de Becas Nacionales para Estudios de Posgrado 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-de-becas-nacionales-para-estudios-de-posgrado-2026/
+- **Deadline:** — — Annex C - Forms  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - Annex C - Formats.doc
 
-- **Deadline:** — — Convocatoria de Apoyos Complementarios de Movilidad en el Extranjero, Movilidad Nacional, Movilidad en los Sectores de Interés y Movilidad para Programas de Dob  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-de-apoyos-complementarios-de-movilidad-en-el-extranjero-movilidad-nacional-movilidad-en-los-sectores-de-interes-y-movilidad-para-programas-de-doble-titulacion-2026/
+- **Deadline:** — — Annex B - Contractual Terms and Conditions  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/en/saf/ops/docs/2025/BID 09.25/BID 09.25 - Annex B - Contractual T&C.pdf 
 
-- **Deadline:** — — Convocatoria Becas Nacionales de Inclusión 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-becas-nacionales-de-inclusion-2026/
+- **Deadline:** — — Annex A - Terms of Reference  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/Annex A - ToRs.pdf
 
-- **Deadline:** — — Convocatoria 2026 Apoyo Complementario De Maternidad y Paternidad Nacional, en el Extranjero y de Consolidación  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-2026-apoyo-complementario-de-maternidad-y-paternidad-nacional-en-el-extranjero-y-de-consolidacion/
+- **Deadline:** — — Request for Proposals  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - RFP.pdf 
 
-- **Deadline:** — — Convocatoria 2026 Apoyo complementario de Maternidad y Paternidad Nacional, en el Extranjero y de Consolidación  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-al-extranjero/convocatoria-2026-apoyo-complementario-de-maternidad-y-paternidad-nacional-en-el-extranjero-y-de-consolidacion-2/
+- **Deadline:** — — RFP Amendment 2  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/10.25-Amendment No.2.pdf
 
-- **Deadline:** — — Convocatoria 2026 Becas para Rotaciones Médicas y Estancias Técnicas Nacionales y en el Extranjero Alineadas a las Prioridades Nacionales del Sector Salud  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-al-extranjero/convocatoria-2026-becas-para-rotaciones-medicas-y-estancias-tecnicas-nacionales-y-en-el-extranjero-alineadas-a-las-prioridades-nacionales-del-sector-salud/
+- **Deadline:** — — RFP Amendment 1  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/BID 10.25 - Amendment No. 1 (GS_OAS Self Insurance Health Plan).pdf 
 
-- **Deadline:** — — Convocatoria de Becas de Posgrado y apoyos complementarios de movilidad para especialidades médicas nacionales 2026.  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-de-becas-de-posgrado-y-apoyos-complementarios-de-movilidad-para-especialidades-medicas-nacionales-2026/
+- **Deadline:** — — Attachment E  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment E.doc
 
-- **Deadline:** — — Convocatoria Becas para rotaciones médicas y estancias técnicas nacionales y en el extranjero alineadas a las prioridades nacionales del sector salud 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/becas-nacionales/convocatoria-becas-para-rotaciones-medicas-y-estancias-tecnicas-nacionales-y-en-el-extranjero-alineadas-a-las-prioridades-nacionales-del-sector-salud-2026/
-
-- **Deadline:** — — OAS - WIU  
+- **Deadline:** — — Scholarships for Academic Studies  
   Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/PAEC/2026/2026%20OAS%20The%20WIU%20Scholarship%20Program%20Announcement%20.pdf
+  Link: https://www.oas.org/en/scholarships/default.asp
 
-- **Deadline:** — — 2018  
-  Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default_2018.asp
+- **Deadline:** — — Attachment D  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment D.xls
 
-- **Deadline:** — — 2019  
-  Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default_2019.asp
+- **Deadline:** — — Attachment C  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment C.xls
 
-- **Deadline:** — — 2021-2020,  
-  Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default_results_2020_2021.asp
+- **Deadline:** — — Attachment B  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment B.xls
 
-- **Deadline:** — — 2024  
-  Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default-results_2024.asp
+- **Deadline:** — — Attachament A  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment A.xls
 
-- **Deadline:** — — 2025  
-  Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default-results_2025.asp
+- **Deadline:** — — Request for Proposals  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/10.25 GS OAS Self Insurance Health Plan.pdf
 
-- **Deadline:** — — 2023-2022,  
+- **Deadline:** — — Request for Proposals  
+  Source: OAS Procurement Notices (RFPs)  
+  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 11.25/11.25 English version.pdf  
+
+- **Deadline:** — — Scholarships  
   Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default-results_2023_2022.asp
+  Link: http://www.oas.org/en/scholarships/default.asp
