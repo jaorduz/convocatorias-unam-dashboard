@@ -1,15 +1,20 @@
 import pandas as pd
 import streamlit as st
 from datetime import datetime
-import pandas as pd
-import streamlit as st
-from datetime import datetime
 import os
 from dotenv import load_dotenv
+
+# =========================
+# CONFIGURACIÓN INICIAL
+# =========================
+st.set_page_config(page_title="Convocatorias de Financiamiento", layout="wide")
 
 # CARGAR VARIABLES DE ENTORNO
 load_dotenv()
 
+# =========================
+# AUTENTICACIÓN
+# =========================
 def check_password():
     def password_entered():
         if st.session_state["password"] == st.secrets["APP_PASSWORD"]:
@@ -33,6 +38,7 @@ def check_password():
 
 if not check_password():
     st.stop()
+
 # =========================
 # COLORES INSTITUCIONALES
 # =========================
@@ -41,8 +47,6 @@ UNAM_GOLD = "#B38E2D"
 BG_SOFT = "#e6ebf2"
 CARD_BG = "#f7f9fc"
 TEXT_MAIN = "#1e293b"
-
-st.set_page_config(page_title="Convocatorias de Financiamiento", layout="wide")
 
 st.markdown(f"""
 <style>
@@ -79,7 +83,14 @@ st.markdown(f"""
 # =========================
 df = pd.read_csv("data/calls.csv")
 
-st.title("Sistema de Monitoreo de Convocatorias")
+# Asegurar columnas necesarias
+if "detected_status" not in df.columns:
+    df["detected_status"] = "unknown"
+
+if "detected_language" not in df.columns:
+    df["detected_language"] = "unknown"
+
+st.title("Sistema Institucional de Monitoreo de Convocatorias")
 st.caption("FES Acatlán-UNAM | Inteligencia Estratégica para la Investigación")
 
 # =========================
@@ -147,7 +158,6 @@ def analizar_estrategia(row):
             puntaje_total += peso
             puntaje_por_area[area] = puntaje_por_area.get(area, 0) + peso
 
-    # Urgencia
     if pd.notna(row["days_remaining"]):
         if row["days_remaining"] <= 14:
             puntaje_total += 5
@@ -203,7 +213,21 @@ def urgencia_icono(dias):
 df["Urgencia"] = df["days_remaining"].apply(urgencia_icono)
 
 # =========================
-# ORDENAMIENTO
+# PRIORIZAR SECihti ABIERTAS
+# =========================
+df["detected_status"] = df["detected_status"].fillna("unknown")
+
+df_secihti_open = df[
+    (df["source"].str.contains("Secihti", case=False, na=False)) &
+    (df["detected_status"] == "open")
+]
+
+df_rest = df.drop(df_secihti_open.index)
+
+df = pd.concat([df_secihti_open, df_rest], ignore_index=True)
+
+# =========================
+# ORDENAMIENTO FINAL
 # =========================
 df = df.sort_values(
     by=["puntaje_estrategico", "days_remaining"],
@@ -225,10 +249,8 @@ k2.metric("Convocatorias vigentes", num_vigentes)
 k3.metric("Sin fecha límite", int(sin_fecha))
 
 # =========================
-# TABLA PRINCIPAL (COMPACTA)
+# TABLA PRINCIPAL
 # =========================
-
-# Reducir longitud de descripción
 df["snippet_short"] = df["snippet"].fillna("").apply(
     lambda x: x[:120] + "..." if len(x) > 120 else x
 )
@@ -236,7 +258,7 @@ df["snippet_short"] = df["snippet"].fillna("").apply(
 df_visual = df.rename(columns={
     "detected_deadline": "Fecha límite",
     "days_remaining": "Días restantes",
-    "source": "Convocatoria",   # <-- CAMBIO AQUÍ
+    "source": "Entidad convocante",
     "title": "Título",
     "snippet_short": "Descripción",
     "url": "Enlace"
@@ -245,15 +267,17 @@ df_visual = df.rename(columns={
 st.markdown("## Convocatorias")
 
 st.dataframe(
-    df_visual[[
-        "Urgencia",
-        "Fecha límite",
-        "Días restantes",
-        "Convocatoria",
-        "Título",
-        "Descripción",
-        "Enlace"
-    ]],
+    df_visual[
+        [
+            "Urgencia",
+            "Fecha límite",
+            "Días restantes",
+            "Entidad convocante",
+            "Título",
+            "Descripción",
+            "Enlace"
+        ]
+    ],
     column_config={
         "Enlace": st.column_config.LinkColumn(
             "Convocatoria",

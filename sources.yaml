@@ -4,7 +4,12 @@ sources:
 
   - name: "Secihti Convocatorias"
     type: "html"
-    url: "https://secihti.mx/convocatorias/"
+    url: "https://secihti.mx/convocatoria/ciencias-y-humanidades/"
+    include_if_url_contains: ["convocatoria", "beca", "apoyo", "programa"]
+
+  - name: "Secihti Convocatorias 2026"
+    type: "html"
+    url: "https://secihti.mx/convocatoria/ciencias-y-humanidades/convocatoria-nacional-de-investigacion-cientifica-y-humanistica-2026/"
     include_if_url_contains: ["convocatoria", "beca", "apoyo", "programa"]
 
   - name: "DGAPA UNAM Convocatorias"

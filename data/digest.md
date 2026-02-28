@@ -1,96 +1,86 @@
 # Calls Digest (auto)
 
-Generated: 2026-02-24T17:26:08.589359+00:00
-
-## Upcoming deadlines
-
-- **2017-10-19** — NEWS: UNESCO-UNEVOC and CONIF organize hackathon training  for Latin American UNEVOC Centres  
-  Source: UNESCO-UNEVOC RSS  
-  Link: https://unevoc.unesco.org/article/Brazil_Workshop_Hackathon.html
-
-- **2025-02-24** — Submit your project to the International Fund for Cultural Diversity’s 2025 cal…  
-  Source: UNESCO IFCD Apply for Funding  
-  Link: https://www.unesco.org/creativity/en/articles/submit-your-project-international-fund-cultural-diversitys-2025-call-applications
+Generated: 2026-02-28T23:13:02.549021+00:00
 
 
 ## Recently found
 
-- **Deadline:** — — Annex B - Contractual Terms and Conditions  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 05.25/BID 05.25 Annex B.pdf
+- **Deadline:** — (open) — Convocatorias Ciencia y Humanidades  
+  Source: Secihti Convocatorias 2026  
+  Link: https://secihti.mx/convocatoria_categoria/ciencias-y-humanidades/
 
-- **Deadline:** — — Attachment F  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment F.doc
+- **Deadline:** — (open) — M00.2.3 Dirección de Asuntos Escolares y Apoyo a Estudiantes  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/menu/transparencia/perfiles_puesto/M00_2_3_Direccion_de_Asuntos_Escolares_y_Apoyo_a_Estudiantes.pdf
 
-- **Deadline:** — — Request for Proposals  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 08.25/BID 08.25 Adquisition and Installation of a Boiler.pdf  
+- **Deadline:** — (unknown) — Programas Estratégicos Especializados para el Fortalecimiento y Expansión de los Posgrados del TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/menu/transparencia/memoriasDocumentales/MD_ProgramasEstrategicosparaelFortalecimientoyExpansion.pdf
 
-- **Deadline:** — — RFP Amendment 1  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - Amendment 1.pdf  
+- **Deadline:** — (unknown) — Personal de Apoyo  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Dir_Personal
 
-- **Deadline:** — — Clarifications  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - Clarifications.pdf  
+- **Deadline:** — (unknown) — Programa de Desarrollo Institucional  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
 
-- **Deadline:** — — Annex C - Forms  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - Annex C - Formats.doc
+- **Deadline:** — (unknown) — Convocatorias de Ingreso  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Admision
 
-- **Deadline:** — — Annex B - Contractual Terms and Conditions  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/en/saf/ops/docs/2025/BID 09.25/BID 09.25 - Annex B - Contractual T&C.pdf 
+- **Deadline:** — (unknown) — Convocatorias SECIHTI  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Secihti
 
-- **Deadline:** — — Annex A - Terms of Reference  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/Annex A - ToRs.pdf
+- **Deadline:** — (open) — Convocatorias TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Tecnm
 
-- **Deadline:** — — Request for Proposals  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 09.25/BID 09.25 - RFP.pdf 
+- **Deadline:** — (unknown) — Convocatorias Externas  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas
 
-- **Deadline:** — — RFP Amendment 2  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/10.25-Amendment No.2.pdf
+- **Deadline:** — (unknown) — Proyectos TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
 
-- **Deadline:** — — RFP Amendment 1  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/BID 10.25 - Amendment No. 1 (GS_OAS Self Insurance Health Plan).pdf 
+- **Deadline:** — (unknown) — Proyectos Externos  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_Externos
 
-- **Deadline:** — — Attachment E  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment E.doc
+- **Deadline:** — (unknown) — Comunicación  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=noticias
 
-- **Deadline:** — — Scholarships for Academic Studies  
+- **Deadline:** — (open) — International Fund for Cultural Diversity (IFCD)  
+  Source: UNESCO IFCD Apply for Funding  
+  Link: https://www.unesco.org/creativity/en/international-fund-cultural-diversity
+
+- **Deadline:** — (open) — NEWS: First UNESCO-UNEVOC Global OER Grant Programme  
+  Source: UNESCO-UNEVOC RSS  
+  Link: https://unevoc.unesco.org/article/First+UNESCO-UNEVOC+Global+OER+Grant+Programme.html
+
+- **Deadline:** — (unknown) — NEWS: UNESCO-UNEVOC and CONIF organize hackathon training  for Latin American UNEVOC Centres  
+  Source: UNESCO-UNEVOC RSS  
+  Link: https://unevoc.unesco.org/article/Brazil_Workshop_Hackathon.html
+
+- **Deadline:** — (open) — OAS Academic Scholarship Program (Graduate)  
   Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/default.asp
+  Link: https://www.oas.org/en/scholarships/Academic_Program_OAS_2026.asp
 
-- **Deadline:** — — Attachment D  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment D.xls
-
-- **Deadline:** — — Attachment C  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment C.xls
-
-- **Deadline:** — — Attachment B  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment B.xls
-
-- **Deadline:** — — Attachament A  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/Attachment A.xls
-
-- **Deadline:** — — Request for Proposals  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 10.25/10.25 GS OAS Self Insurance Health Plan.pdf
-
-- **Deadline:** — — Request for Proposals  
-  Source: OAS Procurement Notices (RFPs)  
-  Link: http://www.oas.org/es/saf/osc/docs/2025/BID 11.25/11.25 English version.pdf  
-
-- **Deadline:** — — Scholarships  
+- **Deadline:** — (open) — OAS Academic Scholarships Program (Undergraduate)  
   Source: OAS Scholarships  
-  Link: http://www.oas.org/en/scholarships/default.asp
+  Link: https://www.oas.org/en/scholarships/specaf_2026.asp
+
+- **Deadline:** — (unknown) — OAS Manual of Procedures for the Scholarship and Training Program  
+  Source: OAS Scholarships  
+  Link: http://www.oas.org/en/scholarships/ManualofProcedures.pdf
+
+- **Deadline:** — (unknown) — OAS - UNIR, EP NEWMAN and Mexico  
+  Source: OAS Scholarships  
+  Link: https://www.oas.org/en/scholarships/PAEC/2026/P26_Convocatoria_de_BecasOEA _UNIR_EP_NEWMAN_y_UNIR_MX_2026.pdf
+
+- **Deadline:** — (unknown) — OAS â VIU  
+  Source: OAS Scholarships  
+  Link: https://www.oas.org/en/scholarships/PAEC/2025/Convocatoria de Programa de Becas OEA-VIU 2026.pdf
