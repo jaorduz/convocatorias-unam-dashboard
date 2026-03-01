@@ -213,20 +213,32 @@ st.dataframe(
 # HISTÓRICO
 # =========================
 with st.expander("Ver convocatorias cerradas (histórico)"):
-    df_closed_visual = df_closed.rename(columns={
-        "detected_deadline": "Fecha límite",
+    df_closed_visual = df_closed.copy()
+
+    # Asegurar que Fecha límite exista
+    if "Fecha límite" not in df_closed_visual.columns:
+        df_closed_visual["Fecha límite"] = df_closed_visual["detected_deadline"]
+
+    df_closed_visual = df_closed_visual.rename(columns={
         "source": "Entidad convocante",
         "title": "Título",
         "url": "Enlace"
     })
 
+    # Eliminar duplicados por seguridad
+    df_closed_visual = df_closed_visual.loc[:, ~df_closed_visual.columns.duplicated()]
+
     st.dataframe(
-        df_closed_visual[
-            ["Estado", "Fecha límite", "Entidad convocante", "Título", "Enlace"]
-        ],
+        df_closed_visual[[
+            "Estado",
+            "Fecha límite",
+            "Entidad convocante",
+            "Título",
+            "Enlace"
+        ]],
         column_config={
             "Enlace": st.column_config.LinkColumn(
-                "Enlace",
+                "Convocatoria",
                 display_text="🔗 Ver"
             )
         },
