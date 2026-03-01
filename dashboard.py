@@ -118,9 +118,19 @@ if langs:
 # FECHA
 # =========================
 df = df.copy()
+
+# Convertir a datetime
 df["detected_deadline"] = pd.to_datetime(df["detected_deadline"], errors="coerce")
+
 today = pd.Timestamp.today().normalize()
+
+# Calcular días restantes
 df["days_remaining"] = (df["detected_deadline"] - today).dt.days
+
+# Formato visible para la tabla
+df["Fecha límite"] = df["detected_deadline"].dt.strftime("%Y-%m-%d")
+df["Fecha límite"] = df["Fecha límite"].fillna("—")
+
 
 # =========================
 # ESTADO
@@ -169,10 +179,9 @@ k2.metric("Convocatorias vigentes", num_vigentes)
 k3.metric("Sin fecha límite", int(sin_fecha))
 
 # =========================
-# TABLA PRINCIPAL
+# TABLA PRINCIPAL. Rename
 # =========================
 df_visual = df_main.rename(columns={
-    "detected_deadline": "Fecha límite",
     "source": "Entidad convocante",
     "title": "Título",
     "snippet_short": "Descripción",
