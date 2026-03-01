@@ -1,12 +1,8 @@
-<!-- # Funding Radar Agent -->
+# Sistema Institucional de Monitoreo de Convocatorias
+### Facultad de Estudios Superiores Acatlán – UNAM
 
-<div id="header"><p style="color:#3364ff; text-align:center; font-weight:bold; font-family:verdana; font-size:25px;">Sistema de Monitoreo de Convocatorias </p></div>
-
-[![Open this NB in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1aqs2CUJESGhbhRJ4tfW5U8bN4yr5FtL_){:target="_blank"}
-
-
-[licenseBDG:](https://img.shields.io/badge/License-CC-orange?style=plastic){:target="_blank"}
-[license:](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en){:target="_blank"}
+[licenseBDG:](https://img.shields.io/badge/License-CC-orange?style=plastic)
+[license:](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.en)
 
 [mywebsiteBDG]:https://img.shields.io/badge/website-jaorduz.github.io-0abeeb?style=plastic
 [mywebsite]: https://jaorduz.github.io/
@@ -25,14 +21,14 @@
 [![Github][mygithubBDG-jaorduz]][mygithub-jaorduz]
 [![Github][mygithubBDG-jaorduc]][mygithub-jaorduc]
 [![Follow @jaorduc][myXprofileBDG]][myXprofile]
-[![CC License][licenseBDG]][license]
+
 
 ---
 
 <p style="text-align:right; font-family:verdana;"><a href="mywebsiteBDG" style="color:#3364ff; text-decoration:none;">@Javier Orduz</a></p>    
 
 ---
-Este repositorio contiene la información sobre el sitio [Sistema de Monitoreo de Convocatorias-FESAc-UNAM](https://smcfesacatlanunam.streamlit.app/){:target="_blank"} 
+Este repositorio contiene la información sobre el sitio [Sistema Institucional de Monitoreo de Convocatorias-FESAc-UNAM](https://smcfesacatlanunam.streamlit.app/)
 
 
 ## Contents
