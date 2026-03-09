@@ -1,17 +1,21 @@
 # Calls Digest (auto)
 
-Generated: 2026-03-02T14:21:03.098510+00:00
+Generated: 2026-03-09T14:23:42.118211+00:00
 
 
 ## Recently found
 
-- **Deadline:** — (open) — Convocatorias Ciencia y Humanidades  
-  Source: Secihti Convocatorias 2026  
-  Link: https://secihti.mx/convocatoria_categoria/ciencias-y-humanidades/
+- **Deadline:** — (unknown) — OAS - OAS â The New School Graduate Programs  
+  Source: OAS Scholarships  
+  Link: https://www.oas.org/en/scholarships/PAEC/2026/2026 OAS The New School Scholarship Announcement - Final.pdf
 
-- **Deadline:** — (open) — M00.2.3 Dirección de Asuntos Escolares y Apoyo a Estudiantes  
+- **Deadline:** — (unknown) — Proyectos Externos  
   Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/menu/transparencia/perfiles_puesto/M00_2_3_Direccion_de_Asuntos_Escolares_y_Apoyo_a_Estudiantes.pdf
+  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_Externos
+
+- **Deadline:** — (unknown) — Programas presupuestarios MIR TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programas_Presupuestarios
 
 - **Deadline:** — (unknown) — Programas Estratégicos Especializados para el Fortalecimiento y Expansión de los Posgrados del TecNM  
   Source: TecNM Convocatorias  
@@ -45,13 +49,13 @@ Generated: 2026-03-02T14:21:03.098510+00:00
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
 
-- **Deadline:** — (unknown) — Proyectos Externos  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_Externos
-
 - **Deadline:** — (unknown) — Comunicación  
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=noticias
+
+- **Deadline:** — (open) — Convocatorias Ciencia y Humanidades  
+  Source: Secihti Convocatorias 2026  
+  Link: https://secihti.mx/convocatoria_categoria/ciencias-y-humanidades/
 
 - **Deadline:** — (open) — International Fund for Cultural Diversity (IFCD)  
   Source: UNESCO IFCD Apply for Funding  
@@ -80,7 +84,3 @@ Generated: 2026-03-02T14:21:03.098510+00:00
 - **Deadline:** — (unknown) — OAS - UNIR, EP NEWMAN and Mexico  
   Source: OAS Scholarships  
   Link: https://www.oas.org/en/scholarships/PAEC/2026/P26_Convocatoria_de_BecasOEA _UNIR_EP_NEWMAN_y_UNIR_MX_2026.pdf
-
-- **Deadline:** — (unknown) — OAS â VIU  
-  Source: OAS Scholarships  
-  Link: https://www.oas.org/en/scholarships/PAEC/2025/Convocatoria de Programa de Becas OEA-VIU 2026.pdf
