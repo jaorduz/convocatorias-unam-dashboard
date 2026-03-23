@@ -35,6 +35,12 @@ sources:
 
   # 🌎 International
 
+
+  - name: "Wenner-Gren Foundation"
+    type: "html"
+    url: "https://wennergren.org/"
+    include_if_url_contains: ["solicitation", "funding", "deadline"]
+
   - name: "Mitacs"
     type: "html"
     url: "https://www.mitacs.ca/our-programs/globalink-research-award/"
