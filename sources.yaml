@@ -35,6 +35,23 @@ sources:
 
   # 🌎 International
 
+  - name: "Mitacs"
+    type: "html"
+    url: "https://www.mitacs.ca/our-programs/globalink-research-award/"
+    include_if_url_contains: ["solicitation", "award", "deadline"]
+
+
+  - name: "Lupus Research Alliance"
+    type: "html"
+    url: "https://www.lupusresearch.org/for-researchers/funding-opportunities/"
+    include_if_url_contains: ["solicitation", "funding", "deadline"]
+
+  - name: "Lupus Research Alliance"
+    type: "html"
+    url: "https://www.lupusresearch.org/for-researchers/funding-opportunities/"
+    include_if_url_contains: ["solicitation", "funding", "deadline"]
+
+
   - name: "NSF Funding Opportunities"
     type: "html"
     url: "https://www.nsf.gov/funding/opportunities.jsp"
