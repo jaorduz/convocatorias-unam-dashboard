@@ -35,6 +35,12 @@ sources:
 
   # 🌎 International
 
+  - name: "Amazon Research Awards"
+    type: "html"
+    url: "https://www.amazon.science/research-awards/amazon-security-call-for-proposals-spring-2026"
+    include_if_url_contains: ["solicitation", "award", "deadline"]
+
+
 
   - name: "Wenner-Gren Foundation"
     type: "html"

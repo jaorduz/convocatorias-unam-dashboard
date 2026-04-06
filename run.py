@@ -19,9 +19,7 @@ import yaml
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
 from dotenv import load_dotenv
-
-load_dotenv()
-
+load_dotenv(override=True)
 
 @dataclass
 class Item:

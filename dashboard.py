@@ -1,40 +1,79 @@
+import os
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
-from datetime import datetime
-import os
 from dotenv import load_dotenv
 
 # =========================
 # CONFIGURACIÓN INICIAL
 # =========================
 st.set_page_config(page_title="Convocatorias de Financiamiento", layout="wide")
-
-# CARGAR VARIABLES DE ENTORNO
-load_dotenv()
+load_dotenv(override=True)
 
 # =========================
-# AUTENTICACIÓN
+# AUTENTICACIÓN (ON / OFF)
 # =========================
-def check_password():
+def require_password_enabled() -> bool:
+    value = os.getenv("REQUIRE_PASSWORD")
+    if value is None:
+        try:
+            value = st.secrets.get("REQUIRE_PASSWORD", "false")
+        except Exception:
+            value = "false"
+    value = str(value).strip().lower()
+    return value in {"1", "true", "yes", "on"}
+
+
+def get_app_password() -> str | None:
+    env_value = os.getenv("APP_PASSWORD")
+    if env_value:
+        return env_value
+    try:
+        return st.secrets.get("APP_PASSWORD")
+    except Exception:
+        return None
+
+
+def check_password() -> bool:
+    app_password = get_app_password()
+
+    if not app_password:
+        st.error("No se encontró APP_PASSWORD en variables de entorno ni en secrets.")
+        return False
+
     def password_entered():
-        if st.session_state["password"] == st.secrets["APP_PASSWORD"]:
+        if st.session_state["password"] == app_password:
             st.session_state["password_correct"] = True
             del st.session_state["password"]
         else:
             st.session_state["password_correct"] = False
 
     if "password_correct" not in st.session_state:
-        st.text_input("Contraseña institucional", type="password", key="password", on_change=password_entered)
+        st.text_input(
+            "Contraseña institucional",
+            type="password",
+            key="password",
+            on_change=password_entered,
+        )
         return False
-    elif not st.session_state["password_correct"]:
-        st.text_input("Contraseña institucional", type="password", key="password", on_change=password_entered)
+
+    if not st.session_state["password_correct"]:
+        st.text_input(
+            "Contraseña institucional",
+            type="password",
+            key="password",
+            on_change=password_entered,
+        )
         st.error("Contraseña incorrecta")
         return False
-    else:
-        return True
 
-if not check_password():
-    st.stop()
+    return True
+
+
+if require_password_enabled():
+    if not check_password():
+        st.stop()
 
 # =========================
 # COLORES INSTITUCIONALES
@@ -45,7 +84,8 @@ BG_SOFT = "#e6ebf2"
 CARD_BG = "#f7f9fc"
 TEXT_MAIN = "#1e293b"
 
-st.markdown(f"""
+st.markdown(
+    f"""
 <style>
     .stApp {{ background-color: {BG_SOFT}; }}
     h1 {{ color: {UNAM_BLUE}; font-weight: 700; }}
@@ -62,12 +102,20 @@ st.markdown(f"""
         font-weight: 700;
     }}
 </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 # =========================
 # CARGAR DATOS
 # =========================
-df = pd.read_csv("data/calls.csv")
+DATA_PATH = Path("data/calls.csv")
+
+if not DATA_PATH.exists():
+    st.warning("No hay datos disponibles todavía. Ejecuta primero el agente para generar data/calls.csv.")
+    st.stop()
+
+df = pd.read_csv(DATA_PATH)
 
 if "detected_status" not in df.columns:
     df["detected_status"] = "unknown"
@@ -99,13 +147,13 @@ col1, col2 = st.columns(2)
 with col1:
     sources = st.multiselect(
         "Filtrar por entidad convocante",
-        sorted(df["source"].dropna().unique().tolist())
+        sorted(df["source"].dropna().unique().tolist()),
     )
 
 with col2:
     langs = st.multiselect(
         "Filtrar por idioma",
-        sorted(df["detected_language"].dropna().unique().tolist())
+        sorted(df["detected_language"].dropna().unique().tolist()),
     )
 
 if sources:
@@ -118,19 +166,11 @@ if langs:
 # FECHA
 # =========================
 df = df.copy()
-
-# Convertir a datetime
 df["detected_deadline"] = pd.to_datetime(df["detected_deadline"], errors="coerce")
-
 today = pd.Timestamp.today().normalize()
-
-# Calcular días restantes
 df["days_remaining"] = (df["detected_deadline"] - today).dt.days
-
-# Formato visible para la tabla
 df["Fecha límite"] = df["detected_deadline"].dt.strftime("%Y-%m-%d")
 df["Fecha límite"] = df["Fecha límite"].fillna("—")
-
 
 # =========================
 # ESTADO
@@ -153,6 +193,7 @@ def calcular_estado(row):
         return "🔴 Cierre próximo"
     return "🟡 En curso"
 
+
 df["Estado"] = df.apply(calcular_estado, axis=1)
 
 # =========================
@@ -161,10 +202,32 @@ df["Estado"] = df.apply(calcular_estado, axis=1)
 df_main = df[df["Estado"] != "⚫ Cerrada"].copy()
 df_closed = df[df["Estado"] == "⚫ Cerrada"].copy()
 
-# Crear snippet corto SOLO para main
-df_main["snippet_short"] = df_main["snippet"].fillna("").apply(
-    lambda x: x[:120] + "..." if len(x) > 120 else x
-)
+# =========================
+# FORMATO DE TEXTO
+# =========================
+def wrap_text(text, width=40):
+    words = str(text).split()
+    lines = []
+    line = ""
+
+    for w in words:
+        if len(line) + len(w) + (1 if line else 0) <= width:
+            line += (" " + w) if line else w
+        else:
+            if line:
+                lines.append(line)
+            line = w
+
+    if line:
+        lines.append(line)
+
+    return "\n".join(lines)
+
+
+df_main["Título"] = df_main["title"].fillna("").apply(lambda x: wrap_text(x, 45))
+df_main["Descripción"] = df_main["snippet"].fillna("").apply(lambda x: wrap_text(str(x)[:200], 55))
+
+df_closed["Título"] = df_closed["title"].fillna("").apply(lambda x: wrap_text(x, 45))
 
 # =========================
 # KPIs
@@ -179,31 +242,38 @@ k2.metric("Convocatorias vigentes", num_vigentes)
 k3.metric("Sin fecha límite", int(sin_fecha))
 
 # =========================
-# TABLA PRINCIPAL. Rename
+# TABLA PRINCIPAL
 # =========================
-df_visual = df_main.rename(columns={
-    "source": "Entidad convocante",
-    "title": "Título",
-    "snippet_short": "Descripción",
-    "url": "Enlace"
-})
+df_visual = df_main.rename(
+    columns={
+        "source": "Entidad convocante",
+        "url": "Enlace",
+    }
+)
 
 st.markdown("## Convocatorias")
 
 st.dataframe(
-    df_visual[[
-        "Estado",
-        "Fecha límite",
-        "Entidad convocante",
-        "Título",
-        "Descripción",
-        "Enlace"
-    ]],
-    column_config={
-        "Enlace": st.column_config.LinkColumn(
+    df_visual[
+        [
+            "Estado",
+            "Fecha límite",
+            "Entidad convocante",
+            "Título",
+            "Descripción",
             "Enlace",
-            display_text="🔗 Ver"
-        )
+        ]
+    ],
+    column_config={
+        "Estado": st.column_config.TextColumn("Estado", width="small"),
+        "Fecha límite": st.column_config.TextColumn("Fecha límite", width="small"),
+        "Entidad convocante": st.column_config.TextColumn("Entidad convocante", width="medium"),
+        "Título": st.column_config.TextColumn("Título", width="medium"),
+        "Descripción": st.column_config.TextColumn("Descripción", width="medium"),
+        "Enlace": st.column_config.LinkColumn(
+            "Convocatoria",
+            display_text="🔗 Ver",
+        ),
     },
     hide_index=True,
     width="stretch",
@@ -214,32 +284,28 @@ st.dataframe(
 # =========================
 with st.expander("Ver convocatorias cerradas (histórico)"):
     df_closed_visual = df_closed.copy()
-
-    # Asegurar que Fecha límite exista
-    if "Fecha límite" not in df_closed_visual.columns:
-        df_closed_visual["Fecha límite"] = df_closed_visual["detected_deadline"]
-
-    df_closed_visual = df_closed_visual.rename(columns={
-        "source": "Entidad convocante",
-        "title": "Título",
-        "url": "Enlace"
-    })
-
-    # Eliminar duplicados por seguridad
+    df_closed_visual = df_closed_visual.rename(
+        columns={
+            "source": "Entidad convocante",
+            "url": "Enlace",
+        }
+    )
     df_closed_visual = df_closed_visual.loc[:, ~df_closed_visual.columns.duplicated()]
 
     st.dataframe(
-        df_closed_visual[[
-            "Estado",
-            "Fecha límite",
-            "Entidad convocante",
-            "Título",
-            "Enlace"
-        ]],
+        df_closed_visual[
+            [
+                "Estado",
+                "Fecha límite",
+                "Entidad convocante",
+                "Título",
+                "Enlace",
+            ]
+        ],
         column_config={
             "Enlace": st.column_config.LinkColumn(
                 "Convocatoria",
-                display_text="🔗 Ver"
+                display_text="🔗 Ver",
             )
         },
         hide_index=True,
@@ -250,5 +316,4 @@ with st.expander("Ver convocatorias cerradas (histórico)"):
 # GRÁFICO
 # =========================
 st.markdown("## 📊 Distribución por Entidad")
-
 st.bar_chart(df["source"].value_counts())
