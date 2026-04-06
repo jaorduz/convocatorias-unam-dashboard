@@ -1,6 +1,17 @@
 [theme]
 base = "light"
-primaryColor = "#B38E2D"
-backgroundColor = "#e6ebf2"
-secondaryBackgroundColor = "#f7f9fc"
-textColor = "#1e293b"
+
+# Color primario (acento)
+primaryColor = "#B38E2D"   # Dorado UNAM refinado
+
+# Fondo general (muy suave, no blanco puro)
+backgroundColor = "#EEF2F7"
+
+# Fondo de tarjetas / widgets
+secondaryBackgroundColor = "#FFFFFF"
+
+# Texto principal
+textColor = "#1E293B"
+
+# Tipografía
+font = "sans serif"
