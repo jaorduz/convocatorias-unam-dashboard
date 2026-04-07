@@ -14,8 +14,7 @@ sources:
 
   - name: "DGAPA UNAM Convocatorias"
     type: "html"
-    # url: "https://dgapa.unam.mx/index.php/programas"
-    url: "https://dgapa.unam.mx/index.php/convocatorias-y-resultados"
+    url: "https://dgapa.unam.mx/index.php/impulso-a-la-investigacion"
     include_if_url_contains: ["convoc", "programa", "apoyo"]
 
   - name: "TecNM Convocatorias"
@@ -102,12 +101,12 @@ sources:
     type: "rss"
     url: "http://www.unevoc.unesco.org/unevoc_rss.xml"
 
-  - name: "OAS Scholarships"
-    type: "html"
-    url: "https://www.oas.org/en/scholarships/"
-    include_if_url_contains: ["scholar", "application", "deadline", "call"]
+  # - name: "OAS Scholarships"
+  #   type: "html"
+  #   url: "https://www.oas.org/en/scholarships/"
+  #   include_if_url_contains: ["scholar", "application", "deadline", "call"]
 
-  - name: "OAS Procurement Notices (RFPs)"
-    type: "html"
-    url: "https://www.oas.org/OASpage/bid/"
-    include_if_url_contains: ["rfp", "proposal", "bid", "request"]
+  # - name: "OAS Procurement Notices (RFPs)"
+  #   type: "html"
+  #   url: "https://www.oas.org/OASpage/bid/"
+  #   include_if_url_contains: ["rfp", "proposal", "bid", "request"]

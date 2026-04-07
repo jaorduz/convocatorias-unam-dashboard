@@ -3,3 +3,6 @@
 .streamlit/secrets.toml
 
 readmeinternal.md
+
+data/emailsTosend.csv
+data/special_recipients.csv

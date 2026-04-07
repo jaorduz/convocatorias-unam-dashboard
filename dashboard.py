@@ -80,7 +80,7 @@ if require_password_enabled():
 # =========================
 UNAM_BLUE = "#002855"
 UNAM_GOLD = "#B38E2D"
-BG_SOFT = "#e6ebf2"
+BG_SOFT = "#EEF2F7"
 CARD_BG = "#f7f9fc"
 TEXT_MAIN = "#1e293b"
 
@@ -90,6 +90,7 @@ st.markdown(
     .stApp {{ background-color: {BG_SOFT}; }}
     h1 {{ color: {UNAM_BLUE}; font-weight: 700; }}
     h2 {{ color: {UNAM_BLUE}; }}
+    
     div[data-testid="stMetric"] {{
         background-color: {CARD_BG};
         padding: 18px;
@@ -97,10 +98,12 @@ st.markdown(
         border-top: 4px solid {UNAM_GOLD};
         box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
     }}
+
     div[data-testid="stMetricValue"] {{
         color: {TEXT_MAIN};
         font-weight: 700;
     }}
+
 </style>
 """,
     unsafe_allow_html=True,
