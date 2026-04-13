@@ -15,7 +15,7 @@ sources:
   - name: "DGAPA UNAM Convocatorias"
     type: "html"
     url: "https://dgapa.unam.mx/index.php/impulso-a-la-investigacion"
-    include_if_url_contains: ["convoc", "programa", "apoyo"]
+    include_if_url_contains: ["convocatoria", "programa", "apoyo"]
 
   - name: "TecNM Convocatorias"
     type: "html"
@@ -38,13 +38,13 @@ sources:
   - name: "Canada NSERC Alliance Quantum Grants: Mexico-Canada Research Partnership"
     type: "html"
     url: "https://nserc-crsng.canada.ca/en/news/new-canada-mexico-partnership-enhance-research-cooperation-and-promote-joint-interdisciplinary"
-    include_if_url_contains: ["solicitation", "award", "deadline","NSER","Canada", "Mexico"]
+    include_if_url_contains: ["solicitation", "award", "deadline"]
 
 
   - name: "Canada NSERC Alliance Quantum Grants"
     type: "html"
     url: "https://nserc-crsng.canada.ca/en/news/new-funding-available-nsercs-alliance-quantum-grants"
-    include_if_url_contains: ["solicitation", "award", "deadline","NSER","Canada"]
+    include_if_url_contains: ["solicitation", "award", "deadline"]
 
 
 
