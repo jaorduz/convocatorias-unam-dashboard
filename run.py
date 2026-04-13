@@ -9,6 +9,7 @@ import smtplib
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from email.mime.text import MIMEText
+from tempfile import template
 from typing import Any, Dict, Iterable, List, Optional
 from urllib.parse import urljoin, urlparse
 
@@ -415,12 +416,16 @@ def parse_rss_source(source_name: str, url: str, keywords_es: List[str], keyword
     return items
 
 
-SIGNATURE_NAME = "Secretaría Académica de Investigación"
-SIGNATURE_INSTITUTION = "UIMA, FES Acatlán – UNAM"
+SIGNATURE_NAME = "Secretaría Académica de Investigación-UIMA"
+SIGNATURE_INSTITUTION = "FES Acatlán – UNAM"
+SIGNATURE_JO = "Dr. Javier Orduz"
 SIGNATURE_CONTACT = "Teléfono: (+52) 555 623 1750. Ext.: 38903"
 DASHBOARD_URL = "https://smcfesacatlanunam.streamlit.app/"
 
 
+def load_email_template(path: str) -> str:
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
 
 def send_email_digest(filepath: str, recipients: list[str]) -> None:
     sender = os.getenv("EMAIL_USER")
@@ -437,84 +442,34 @@ def send_email_digest(filepath: str, recipients: list[str]) -> None:
     html_body = html_body.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     html_body = html_body.replace("\n", "<br>")
 
-    # Títulos markdown simples
-    html_body = html_body.replace("# Calls Digest (auto)<br>", "<h2 style='margin-bottom:8px;color:#002855;'>Sistema Institucional de Monitoreo de Convocatorias</h2>")
-    html_body = html_body.replace("## Upcoming deadlines<br>", "<h3 style='color:#002855;margin-top:24px;'>Próximas fechas límite</h3>")
-    html_body = html_body.replace("## Recently found<br>", "<h3 style='color:#002855;margin-top:24px;'>Convocatorias detectadas recientemente</h3>")
+    # Ajustes básicos de títulos
+    html_body = html_body.replace(
+        "# Calls Digest (auto)<br>",
+        "<h2 style='margin-bottom:8px;color:#002855;'>Sistema Institucional de Monitoreo de Convocatorias</h2>"
+    )
+    html_body = html_body.replace(
+        "## Upcoming deadlines<br>",
+        "<h3 style='color:#002855;margin-top:24px;'>Próximas fechas límite</h3>"
+    )
+    html_body = html_body.replace(
+        "## Recently found<br>",
+        "<h3 style='color:#002855;margin-top:24px;'>Convocatorias detectadas recientemente</h3>"
+    )
 
-    # Negritas markdown simples
-    html_body = html_body.replace("**", "<b>", 1)
-    # Esta conversión de markdown es mínima; la refinaremos en el siguiente paso.
+    template = load_email_template("templates/email_template.html")
 
-    html_template = f"""
-    <html>
-    <body style="margin:0;padding:0;background-color:#EEF2F7;font-family:Arial, Helvetica, sans-serif;color:#1E293B;">
-      <div style="max-width:760px;margin:0 auto;padding:32px 20px;">
-        <div style="background-color:#002855;color:white;padding:20px 24px;border-radius:14px 14px 0 0;">
-          <div style="font-size:13px;opacity:0.9;">FES Acatlán – UNAM</div>
-          <div style="font-size:24px;font-weight:700;margin-top:6px;">Boletín de Convocatorias</div>
-          <div style="font-size:14px;margin-top:6px;color:#D6E2F0;">Actualización automática semanal</div>
-        </div>
-
-        
-<div style="margin-bottom:20px;padding:14px 16px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;">
-  <div style="font-size:14px;font-weight:700;color:#002855;margin-bottom:6px;">
-    Acceso al dashboard institucional
-  </div>
-
-  <div style="font-size:14px;color:#334155;margin-bottom:10px;">
-    Puede consultar la versión interactiva y actualizada del sistema en el siguiente enlace:
-  </div>
-
-  <a href="{DASHBOARD_URL}"
-     style="display:inline-block;background:#B38E2D;color:white;text-decoration:none;
-            padding:10px 14px;border-radius:8px;font-size:14px;font-weight:700;">
-    Ir al dashboard
-  </a>
-</div>
-
-        <div style="background-color:white;padding:24px;border-radius:0 0 14px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.05);line-height:1.6;">
-          {html_body}
-        </div>
-
-
-<hr style="border:none;border-top:1px solid #E2E8F0;margin:32px 0 20px 0;">
-
-<div style="
-    font-size:13px;
-    color:#334155;
-    line-height:1.8;
-    padding:16px 18px;
-    background:#F8FAFC;
-    border-radius:10px;
-    border:1px solid #E2E8F0;
-">
-    <div style="font-weight:700;color:#1E293B;font-size:14px;">
-        {SIGNATURE_NAME}
-    </div>
-
-    <div style="margin-top:2px;">
-        {SIGNATURE_INSTITUTION}
-    </div>
-
-    <div style="margin-top:6px;color:#64748B;">
-        {SIGNATURE_CONTACT}
-    </div>
-</div>
-
-<div style="padding:18px 6px 0 6px;font-size:12px;color:#64748B;">
-  Este mensaje fue generado automáticamente por el Sistema Institucional de Monitoreo de Convocatorias.
-</div>
-
-      </div>
-    </body>
-    </html>
-    """
+    html_template = template \
+        .replace("{{CONTENT}}", html_body) \
+        .replace("{{DASHBOARD_URL}}", DASHBOARD_URL) \
+        .replace("{{SIGNATURE_NAME}}", SIGNATURE_NAME) \
+        .replace("{{SIGNATURE_JO}}", SIGNATURE_JO) \
+        .replace("{{SIGNATURE_INSTITUTION}}", SIGNATURE_INSTITUTION) \
+        .replace("{{SIGNATURE_CONTACT}}", SIGNATURE_CONTACT)
 
     msg = MIMEText(html_template, "html", "utf-8")
     msg["Subject"] = "Boletín semanal de convocatorias"
     msg["From"] = sender
-    msg["To"] = ", ".join(recipients)
+    msg["To"] = sender
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
@@ -607,29 +562,33 @@ def main() -> None:
 # JO To send
 
 def load_special_recipients(csv_path: str) -> list[str]:
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, dtype=str).fillna("")
 
-    df["selected"] = df["selected"].astype(str).str.strip().str.lower()
-    df["email"] = df["email"].astype(str).str.strip()
+    df["selected"] = df["selected"].str.strip().str.lower()
+    df["email"] = df["email"].str.strip().str.lower()
 
     selected_df = df[
         (df["selected"] == "true") &
-        (df["email"].notna()) &
         (df["email"] != "")
-    ]
+    ].copy()
+
+    # quitar duplicados por seguridad
+    selected_df = selected_df.drop_duplicates(subset=["email"])
 
     recipients = selected_df["email"].tolist()
     return recipients
 
 
 def update_special_recipients_status(csv_path: str, sent_recipients: list[str]) -> None:
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, dtype=str).fillna("")
 
-    df["email"] = df["email"].astype(str).str.strip()
+    df["email"] = df["email"].str.strip().str.lower()
+    df["emailStatus"] = df["emailStatus"].astype(str)
+    df["lastEmailSent"] = df["lastEmailSent"].astype(str)
 
     now_ts = datetime.now(timezone.utc).isoformat()
 
-    mask = df["email"].isin(sent_recipients)
+    mask = df["email"].isin([e.strip().lower() for e in sent_recipients])
     df.loc[mask, "emailStatus"] = "sent"
     df.loc[mask, "lastEmailSent"] = now_ts
 
@@ -637,18 +596,16 @@ def update_special_recipients_status(csv_path: str, sent_recipients: list[str]) 
 
 
 def normalize_special_recipients_status(csv_path: str) -> None:
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, dtype=str).fillna("")
 
-    df["selected"] = df["selected"].astype(str).str.strip().str.lower()
-    df["email"] = df["email"].astype(str).str.strip()
-
-    if "emailStatus" not in df.columns:
-        df["emailStatus"] = ""
+    df["selected"] = df["selected"].str.strip().str.lower()
+    df["email"] = df["email"].str.strip().str.lower()
+    df["emailStatus"] = df["emailStatus"].astype(str).str.strip().str.lower()
 
     mask_pending = (
         (df["selected"] == "true") &
         (df["email"] != "") &
-        (df["emailStatus"].fillna("").astype(str).str.strip().str.lower() != "sent")
+        (df["emailStatus"] != "sent")
     )
 
     df.loc[mask_pending, "emailStatus"] = "pending"

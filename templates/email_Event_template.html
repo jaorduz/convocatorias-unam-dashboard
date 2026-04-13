@@ -1,0 +1,73 @@
+<html>
+<body style="margin:0;padding:0;background-color:#EEF2F7;font-family:Arial, Helvetica, sans-serif;color:#1E293B;">
+
+  <div style="max-width:760px;margin:0 auto;padding:32px 20px;">
+
+    <!-- HEADER -->
+    <div style="background-color:#002855;color:white;padding:20px 24px;border-radius:14px 14px 0 0;">
+      <div style="font-size:13px;opacity:0.9;">FES Acatlán – UNAM</div>
+      <div style="font-size:24px;font-weight:700;margin-top:6px;">
+        Boletín de Convocatorias
+      </div>
+      <div style="font-size:14px;margin-top:6px;color:#D6E2F0;">
+        Actualización automática semanal
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div style="background-color:white;padding:24px;border-radius:0 0 14px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.05);line-height:1.6;">
+
+
+
+<div style="margin-bottom:18px;padding:14px 16px;background:#EEF2F7;border-left:4px solid #002855;border-radius:8px;">
+  <div style="font-size:14px;color:#1E293B;line-height:1.6;">
+    Esta herramienta permite identificar de manera oportuna convocatorias abiertas, nacionales e internacionales, y facilitar el acceso a oportunidades de financiamiento, colaboración académica y desarrollo institucional. Le invitamos a compartir esta información con colegas, profesores, investigadores y miembros de la comunidad que puedan beneficiarse. Para sugerencias o actualizaciones, contacte a la Secretaría Académica de Investigación UIMA.
+  </div>
+</div>
+
+      <!-- DASHBOARD -->
+      <div style="margin-bottom:20px;padding:14px 16px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;">
+        <div style="font-size:14px;font-weight:700;color:#002855;margin-bottom:6px;">
+          Acceso al dashboard institucional
+        </div>
+
+        <div style="font-size:14px;color:#334155;margin-bottom:10px;">
+          Consulte la versión interactiva del sistema:
+        </div>
+
+        <a href="{{DASHBOARD_URL}}"
+           style="display:inline-block;background:#B38E2D;color:white;text-decoration:none;
+                  padding:10px 14px;border-radius:8px;font-size:14px;font-weight:700;">
+          Ir al dashboard
+        </a>
+      </div>
+
+      <!-- CONTENIDO DINÁMICO -->
+      {{CONTENT}}
+
+      <!-- FIRMA -->
+      <hr style="border:none;border-top:1px solid #E2E8F0;margin:32px 0 20px 0;">
+
+      <div style="font-size:13px;color:#334155;line-height:1.8;
+                  padding:16px 18px;background:#F8FAFC;border-radius:10px;border:1px solid #E2E8F0;">
+        <div style="font-weight:700;color:#1E293B;font-size:14px;">
+          {{SIGNATURE_NAME}}
+        </div>
+        <div style="margin-top:2px;">{{SIGNATURE_JO}}</div>
+        <div>{{SIGNATURE_INSTITUTION}}</div>
+        <div style="margin-top:6px;color:#64748B;">
+          {{SIGNATURE_CONTACT}}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="padding:18px 6px 0 6px;font-size:12px;color:#64748B;">
+      Este mensaje fue generado automáticamente por el Sistema Institucional de Monitoreo de Convocatorias.
+    </div>
+
+  </div>
+
+</body>
+</html>

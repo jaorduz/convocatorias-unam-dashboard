@@ -24,15 +24,30 @@ sources:
 
   - name: "COMECYT Convocatorias"
     type: "html"
-    url: "https://comecyt.edomex.gob.mx/convocatorias"
+    url: "https://comecyt.edomex.gob.mx/fondo-investigacion-cientifica-desarrollo-tecnologico"
     include_if_url_contains: ["convocatoria","apoyo","beca"]
 
-  - name: "RENIECYT"
-    type: "html"
-    url: "https://conahcyt.mx/reniecyt/"
-    include_if_url_contains: ["registro","convocatoria","reniecyt"]  
+  # - name: "RENIECYT"
+  #   type: "html"
+  #   url: "https://conahcyt.mx/reniecyt/"
+  #   include_if_url_contains: ["registro","convocatoria","reniecyt"]  
 
   # 🌎 International
+
+
+  - name: "Canada NSERC Alliance Quantum Grants: Mexico-Canada Research Partnership"
+    type: "html"
+    url: "https://nserc-crsng.canada.ca/en/news/new-canada-mexico-partnership-enhance-research-cooperation-and-promote-joint-interdisciplinary"
+    include_if_url_contains: ["solicitation", "award", "deadline","NSER","Canada", "Mexico"]
+
+
+  - name: "Canada NSERC Alliance Quantum Grants"
+    type: "html"
+    url: "https://nserc-crsng.canada.ca/en/news/new-funding-available-nsercs-alliance-quantum-grants"
+    include_if_url_contains: ["solicitation", "award", "deadline","NSER","Canada"]
+
+
+
 
   - name: "Amazon Research Awards"
     type: "html"
@@ -65,7 +80,7 @@ sources:
 
   - name: "NSF Funding Opportunities"
     type: "html"
-    url: "https://www.nsf.gov/funding/opportunities.jsp"
+    url: "https://www.nsf.gov/funding/opportunities"
     include_if_url_contains: ["solicitation", "funding", "deadline"]
 
   - name: "Horizon Europe Funding"
