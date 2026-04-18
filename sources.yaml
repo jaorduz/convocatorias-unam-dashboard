@@ -12,6 +12,13 @@ sources:
     url: "https://secihti.mx/convocatoria/ciencias-y-humanidades/convocatoria-nacional-de-investigacion-cientifica-y-humanistica-2026/"
     include_if_url_contains: ["convocatoria", "beca", "apoyo", "programa"]
 
+
+  - name: "Secihti Proyectos Estratégicos"
+    type: "html"
+    url: "https://secihti.mx/ciencia-y-humanidades/proyectos-estrategicos-de-ciencia-y-humanidades/"
+    include_if_url_contains: ["solicitation", "award", "deadline"]
+
+
   - name: "DGAPA UNAM Convocatorias"
     type: "html"
     url: "https://dgapa.unam.mx/index.php/impulso-a-la-investigacion"
@@ -27,6 +34,20 @@ sources:
     url: "https://comecyt.edomex.gob.mx/fondo-investigacion-cientifica-desarrollo-tecnologico"
     include_if_url_contains: ["convocatoria","apoyo","beca"]
 
+   
+  - name: "COMECYT Convocatorias Artículos Científicos"
+    type: "html"
+    url: "https://comecyt.edomex.gob.mx/publicacion-articulos-cientificos"
+    include_if_url_contains: ["convocatoria","apoyo","beca"]
+
+
+  - name: "COMECYT Convocatorias Artículos Científicos"
+    type: "html"
+    url: "https://secihti.mx/capitulo-ciencia-basica-y-de-frontera-2026/"
+    include_if_url_contains: ["Frontera","Ciencia","2026"]
+
+
+
   # - name: "RENIECYT"
   #   type: "html"
   #   url: "https://conahcyt.mx/reniecyt/"
@@ -34,16 +55,36 @@ sources:
 
   # 🌎 International
 
+  - name: "Estancias Científicas de Corta Duración CNRS-Embajada de Francia"
+    type: "html"
+    url: "https://www.mexique.campusfrance.org/programa-franco-mexicano-de-estancias-cientificas-de-corta-duracion-2026-cnrs-embajada-de-francia"
+    include_if_url_contains: ["programa", "estancias", "cientificas", "pdf", "convocatoria"]
+
 
   - name: "Canada NSERC Alliance Quantum Grants: Mexico-Canada Research Partnership"
     type: "html"
-    url: "https://nserc-crsng.canada.ca/en/news/new-canada-mexico-partnership-enhance-research-cooperation-and-promote-joint-interdisciplinary"
+    url: "https://sshrc-crsh.canada.ca/en/funding/opportunities.aspx?utm_content=home"
     include_if_url_contains: ["solicitation", "award", "deadline"]
+
+
 
 
   - name: "Canada NSERC Alliance Quantum Grants"
     type: "html"
     url: "https://nserc-crsng.canada.ca/en/news/new-funding-available-nsercs-alliance-quantum-grants"
+    include_if_url_contains: ["solicitation", "award", "deadline"]
+
+
+
+  - name: "Canada NSERC Alliance Quantum Grants: Mexico-Canada Research Partnership"
+    type: "html"
+    url: "https://ised-isde.canada.ca/site/national-quantum-strategy/en/canadas-national-quantum-strategy"
+    include_if_url_contains: ["solicitation", "award", "deadline"]
+
+
+  - name: "NSERC Funding Opportunities"
+    type: "html"
+    url: "https://nserc-crsng.canada.ca/en/funding/funding-opportunity?search_api_fulltext=&field_archived=1&field_program_type_unique%5B728%5D=728&field_program_type_unique%5B1090%5D=1090&field_program_type_unique%5B1095%5D=1095"
     include_if_url_contains: ["solicitation", "award", "deadline"]
 
 

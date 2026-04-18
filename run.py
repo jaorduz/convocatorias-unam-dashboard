@@ -69,6 +69,31 @@ def detect_status(text: str) -> str:
     return "unknown"
 
 
+EXCLUDED_TERMS = [
+    "maestría",
+    "maestrias",
+    "master",
+    "masters",
+    "posgrado",
+    "posgrados",
+    "licenciatura",
+    "licenciaturas",
+    "doctorado",
+    "doctorados",
+    "estudiar en francia",
+    "programas de posgrado",
+    "admisión",
+    "admisiones",
+    "inscripción",
+    "inscripciones",
+    "estudiante internacional",
+    "campus france",
+]
+
+def is_excluded_content(text: str) -> bool:
+    t = (text or "").lower()
+    return any(term in t for term in EXCLUDED_TERMS)
+
 def stable_id(url: str) -> str:
     return hashlib.sha256(url.encode("utf-8")).hexdigest()
 
@@ -173,6 +198,30 @@ def parse_html_source(
     kws = [k.lower() for k in (keywords_es + keywords_en)]
     now_iso = datetime.now(timezone.utc).isoformat()
 
+    # =====================================================
+    # 1) PRIMERO: intentar registrar la página fuente misma
+    # =====================================================
+    page_title = norm_space(soup.title.get_text(" ", strip=True)) if soup.title else source_name
+    page_text = norm_space(soup.get_text(" ", strip=True))[:5000]
+    page_text_lower = page_text.lower()
+
+    if (not kws or any(k in page_text_lower for k in kws)) and not is_excluded_content(page_text_lower):
+        source_item = Item(
+            source=source_name,
+            title=page_title[:160] if page_title else source_name,
+            url=base_url,
+            snippet=page_text[:240],
+            detected_deadline=extract_deadline(page_text),
+            detected_language=guess_lang(page_text),
+            detected_status=detect_status(page_text),
+            fetched_at=now_iso,
+        )
+        items.append(source_item)
+        seen_urls.add(base_url)
+
+    # =====================================================
+    # 2) DESPUÉS: procesar links internos como antes
+    # =====================================================
     for a in anchors:
         href = a.get("href")
         text = norm_space(a.get_text(" ", strip=True))
@@ -201,8 +250,9 @@ def parse_html_source(
         cl = context.lower()
         if kws and not any(k in cl for k in kws):
             continue
+        if is_excluded_content(cl):
+            continue
 
-        # Fallback: try to fetch destination page for better deadline/status extraction
         full_text = context
         try:
             full_html = fetch_html(abs_url, user_agent, timeout_seconds)
@@ -210,7 +260,12 @@ def parse_html_source(
         except Exception:
             pass
 
-        detected_deadline = extract_deadline(full_text) or fetch_deadline_from_page(abs_url, user_agent, timeout_seconds)
+        if is_excluded_content(full_text):
+            continue   
+        
+        detected_deadline = extract_deadline(full_text) or fetch_deadline_from_page(
+            abs_url, user_agent, timeout_seconds
+        )
         detected_language = guess_lang(full_text)
         detected_status = detect_status(full_text)
         snippet = norm_space(full_text)[:240]
