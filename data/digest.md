@@ -1,13 +1,17 @@
 # Calls Digest (auto)
 
-Generated: 2026-04-20T14:41:47.110816+00:00
+Generated: 2026-04-27T14:47:16.486699+00:00
 
 
 ## Recently found
 
-- Estado: — (unknown) — Proyectos Externos  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_Externos
+- Estado: — (open) — Funding opportunities | Natural Sciences and Engineering Research Council of Canada  
+  Source: NSERC Funding Opportunities  
+  Link: https://nserc-crsng.canada.ca/en/funding/funding-opportunity?search_api_fulltext=&field_archived=1&field_program_type_unique%5B728%5D=728&field_program_type_unique%5B1090%5D=1090&field_program_type_unique%5B1095%5D=1095
+
+- Estado: — (unknown) — eligible countries  
+  Source: UNESCO IFCD Apply for Funding  
+  Link: https://www.unesco.org/creativity/sites/default/files/medias/fichiers/2026/03/List_eligible_countries_17_IFCD_call_2026_en_0.pdf
 
 - Estado: — (open) — Proyectos sin Mediar Convocatoria  
   Source: Secihti Convocatorias 2026  
@@ -80,7 +84,3 @@ Generated: 2026-04-20T14:41:47.110816+00:00
 - Estado: — (closed) — Fondo para la Investigación Científica y Desarrollo Tecnológico del Estado de México | Consejo Mexiquense de Ciencia y Tecnología  
   Source: COMECYT Convocatorias  
   Link: https://comecyt.edomex.gob.mx/fondo-investigacion-cientifica-desarrollo-tecnologico
-
-- Estado: — (unknown) — Apoyo empresarial  
-  Source: COMECYT Convocatorias Artículos Científicos  
-  Link: https://comecyt.edomex.gob.mx/apoyo-empresarial
