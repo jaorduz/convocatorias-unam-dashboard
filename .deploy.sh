@@ -1,4 +1,8 @@
+
+# python run.py
+# streamlit run dashboard.py
+
 git add .
 git pull origin main
-git commit -m "Adding other CfP."
+git commit -m "Updating."
 git push

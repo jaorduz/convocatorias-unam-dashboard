@@ -2,6 +2,23 @@ sources:
 
   # 🇲🇽 Mexico
 
+  - name: "Secihti Convocatorias SNII"
+    type: "html"
+    url: "https://secihti.mx/snii/convocatorias-snii/abiertas-ingreso-o-permanencia-snii/"
+    include_if_url_contains: ["convocatoria", "apoyo", "programa", "2026"]
+
+
+  - name: "DGAPA UNAM PAPIME Convocatorias"
+    type: "html"
+    url: "https://dgapa.unam.mx/index.php/fortalecimiento-a-la-docencia/papime"
+    include_if_url_contains: ["convocatoria", "apoyo", "programa", "2026"]
+
+  - name: "DGAPA UNAM PAPIIT Convocatorias"
+    type: "html"
+    url: "https://dgapa.unam.mx/index.php/impulso-a-la-investigacion/papiit"
+    include_if_url_contains: ["convocatoria", "apoyo", "programa", "2026"]   
+
+
   - name: "Secihti Convocatorias"
     type: "html"
     url: "https://secihti.mx/convocatoria/ciencias-y-humanidades/"
