@@ -23,6 +23,14 @@
 [![Follow @jaorduc][myXprofileBDG]][myXprofile]
 
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-stable-success)
+
+[![DOI](https://zenodo.org/badge/1164379177.svg)](https://doi.org/10.5281/zenodo.19857397)
+
+
 ---
 
 <p style="text-align:right; font-family:verdana;"><a href="mywebsiteBDG" style="color:#3364ff; text-decoration:none;">@Javier Orduz</a></p>    
@@ -31,10 +39,10 @@
 Este repositorio contiene la información sobre el sitio [Sistema Institucional de Monitoreo de Convocatorias-FESAc-UNAM](https://smcfesacatlanunam.streamlit.app/)
 
 
-## Contents
+<!-- ## Contents
 1. [Introduction](#intro)
 1. [Installing](#installing)
-1. [References](#references)
+1. [References](#references) -->
 
 
 # Convocatorias UNAM Dashboard (Interno)
@@ -60,3 +68,16 @@ Dependencias en `requirements.txt`.
 conda create -n calls-agent python=3.11 -y
 conda activate calls-agent
 pip install -r requirements.txt
+
+
+```bibtex
+@software{orduz_SIMC_2026,
+  author       = {Orduz, Javier},
+  title        = {{SIMC}: Sistema de Institucional de Monitoreo de Convocatorias},
+  year         = 2026,
+  version      = {1.0.0},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19857397},
+  url          = {https://doi.org/10.5281/zenodo.19857397}
+}
+```
