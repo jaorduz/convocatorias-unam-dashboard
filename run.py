@@ -683,6 +683,7 @@ if __name__ == "__main__":
         if os.path.exists(csv_path):
             normalize_special_recipients_status(csv_path)
             recipients = load_special_recipients(csv_path)
+            # print("RECIPIENTS FROM CSV:", recipients)
         else:
             recipients = []
 
