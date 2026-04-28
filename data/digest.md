@@ -1,86 +1,86 @@
 # Calls Digest (auto)
 
-Generated: 2026-04-27T14:47:16.486699+00:00
+Generated: 2026-04-28T12:37:40.748724+00:00
 
 
 ## Recently found
 
-- Estado: — (open) — Funding opportunities | Natural Sciences and Engineering Research Council of Canada  
-  Source: NSERC Funding Opportunities  
-  Link: https://nserc-crsng.canada.ca/en/funding/funding-opportunity?search_api_fulltext=&field_archived=1&field_program_type_unique%5B728%5D=728&field_program_type_unique%5B1090%5D=1090&field_program_type_unique%5B1095%5D=1095
+- Estado: — (open) — Convocatorias SNII  
+  Source: Secihti Convocatorias SNII  
+  Link: https://enbc.secihti.mx/snii/convocatorias-snii/
 
-- Estado: — (unknown) — eligible countries  
-  Source: UNESCO IFCD Apply for Funding  
-  Link: https://www.unesco.org/creativity/sites/default/files/medias/fichiers/2026/03/List_eligible_countries_17_IFCD_call_2026_en_0.pdf
+- Estado: — (open) — Convocatorias SNII  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/snii/convocatorias-snii/
 
-- Estado: — (open) — Proyectos sin Mediar Convocatoria  
-  Source: Secihti Convocatorias 2026  
-  Link: https://secihti.mx/tecnologias-e-innovacion/proyectos-sin-mediar-convocatoria/
+- Estado: — (unknown) — Convocatoria 2026 para el Reconocimiento en el Sistema Nacional de Investigadoras e Investigadores  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/wp-content/uploads/snii/convocatorias/2026/Convocatoria_2026_Reconocimiento_SNII.pdf
 
-- Estado: — (open) — Convocatoria Ecos Nord 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/ecos-nord/convocatoria-ecos-nord-2026/
+- Estado: — (open) — Abiertas Ingreso o Permanencia SNII - SECIHTI  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/snii/convocatorias-snii/abiertas-ingreso-o-permanencia-snii/
 
-- Estado: — (open) — Convocatoria Nacional de Investigación Científica y Humanística 2026 - SECIHTI  
-  Source: Secihti Convocatorias 2026  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/convocatoria-nacional-de-investigacion-cientifica-y-humanistica-2026/
+- Estado: — (unknown) — Solicitud de Proyectos Nuevos - Convocatorias 2026  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/2025_papime_aviso_solicitud_proyectos_nuevos_convovatoria_2026.pdf
 
-- Estado: — (open) — Convocatoria Eventos Académicos Internacionales 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/eventos-academicos-internacionales/convocatoria-eventos-academicos-internacionales-2025/
-
-- Estado: — (open) — Convocatoria Vinculación con Organismos Internacionales de Investigación 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/vinculacion-con-organismos-internacionales/convocatoria-vinculacion-con-organismos-internacionales-de-investigacion-2025/
-
-- Estado: — (open) — Convocatoria Divulgación Comunitaria de la Ciencia y las Humanidades 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/divulgacion-comunitaria-de-la-ciencia-y-las-humanidades/convocatoria-divulgacion-comunitaria-de-la-ciencia-y-las-humanidades-2025/
-
-- Estado: — (open) — Convocatoria Ciencia Básica y de Frontera 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/ciencia-basica-y-de-frontera/convocatoria-ciencia-basica-y-de-frontera-2025/
-
-- Estado: — (open) — Convocatoria Investigación Humanística 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/investigacion-humanistica/convocatoria-investigacion-humanistica-2025/
-
-- Estado: — (open) — Convocatoria Apoyos para Academias y Sociedades Científicas y promoción de Olimpiadas Nacionales del Conocimiento 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/apoyos-para-academias-y-sociedades-cientificas-ciencias-y-humanidades/convocatoria-apoyos-para-academias-y-sociedades-cientificas-y-promocion-de-olimpiadas-nacionales-del-conocimiento-2025/
-
-- Estado: — (open) — Convocatoria Proyectos de Investigación Científica y Humanística en Ejes Estratégicos 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/proyectos-de-investigacion/convocatoria-proyectos-de-investigacion-cientifica-y-humanistica-en-ejes-estrategicos-2025/
-
-- Estado: — (open) — Convocatoria ECOS Nord 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/ecos-nord/convocatoria-ecos-nord-2025/
-
-- Estado: — (unknown) — Convocatoria Nacional de Investigación Científica y Humanística 2026: bases generales  
-  Source: COMECYT Convocatorias Artículos Científicos  
-  Link: https://secihti.mx/wp-content/uploads/2026/02/Convocatoria_CYH-20260220T232903.pdf
-
-- Estado: — (open) — Proyectos Estratégicos de Ciencia y Humanidades - SECIHTI  
-  Source: Secihti Proyectos Estratégicos  
-  Link: https://secihti.mx/ciencia-y-humanidades/proyectos-estrategicos-de-ciencia-y-humanidades/
-
-- Estado: — (unknown) — Impulso a la investigación  
-  Source: DGAPA UNAM Convocatorias  
-  Link: https://dgapa.unam.mx/index.php/impulso-a-la-investigacion
-
-- Estado: — (unknown) — Programas Institucionales (folleto)  
-  Source: DGAPA UNAM Convocatorias  
-  Link: https://dgapa.unam.mx/images/dgapa-manual-organizacion/dgapa_programas_institucionales.pdf
+- Estado: — (unknown) — Manual para el registro de participantes y becas  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/becas/2026_manual_registro_participantes_becas.pdf
 
 - Estado: — (unknown) — Convocatoria  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/menu/transparencia/PPU079/Convocatoria_PP_U079_2025.pdf
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2023_papiit_convocatoria.pdf
 
-- Estado: — (unknown) — Proyectos TecNM  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
+- Estado: — (unknown) — Aviso - Convocatoria 2026 - Resultados  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_resultados_convocatoria_2026.pdf
 
-- Estado: — (closed) — Fondo para la Investigación Científica y Desarrollo Tecnológico del Estado de México | Consejo Mexiquense de Ciencia y Tecnología  
-  Source: COMECYT Convocatorias  
-  Link: https://comecyt.edomex.gob.mx/fondo-investigacion-cientifica-desarrollo-tecnologico
+- Estado: — (unknown) — Aviso - Renovaciones 2024 y 2025 - Presupuesto - Convocatoria 2026  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_aviso_presupuesto_renovaciones_2024_2025_convocatoria_2026.pdf
+
+- Estado: — (unknown) — Aviso - Informe Final - Convocatorias 2023 y 2024  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_papiit_aviso_informe_final_convocatorias_2023_2024.pdf
+
+- Estado: — (unknown) — Comité Evaluador de Proyectos de Desarrollo de Infraestructura Académica y Apoyo a la Investigación  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/comites-evaluadores/comite-evaluador-de-proyectos-de-desarrollo-de-infraestructura-academica-y-apoyo-a-la-investigacion
+
+- Estado: — (unknown) — Recomendaciones para presentar su Informe Final - Convocatorias 2023 y 2024 - Modalidades (c) y (e)  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_papiit_recomendaciones_presentar_informe_final_convocatorias_2023_2024_modalidad_grupo.pdf
+
+- Estado: — (unknown) — Recomendaciones para presentar su informe final - Convocatoria 2024 - Modalidades (a), (b) y (d)  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_dfg/2026_papiit_dfg_recomendaciones_presentar_informe_final_convocatoria_2024_modalidades_a_b_d.pdf
+
+- Estado: — (unknown) — Convocatoria  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2024_dfg/2024_papiit_dfg_convocatoria.pdf
+
+- Estado: — (unknown) — Reporte de Avances y Solicitud de Renovación de Proyecto - Convocatoria - DFG - 2025  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_reporte_avances_solicitud_renovacion_proyecto_convocatoria_dfg_2025.pdf
+
+- Estado: — (unknown) — Recomendaciones para presentar su informe final - Convocatorias 2023 y 2024 - Modalidades (a), (b) y (d)  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_papiit_recomendaciones_presentar_informe_final_convocatorias_2023_2024_modalidades_a_b_d.pdf
+
+- Estado: — (unknown) — Reporte de Avances y Solicitud de Renovación de Proyecto - Convocatoria 2025  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_reporte_avances_solicitud_renovacion_proyecto_convocatoria_2025.pdf
+
+- Estado: — (open) — Informe Final de Proyecto - Convocatorias 2022 y 2023  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_informe_final_proyecto_convocatorias_2022_2023.pdf
+
+- Estado: — (unknown) — Informe Parcial de Avances y Solicitud de Renovación de Proyecto - Convocatoria 2024  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_informe_parcial_avances_solicitud_renovcion_proyectos_convocatoria_2024.pdf
+
+- Estado: — (unknown) — Informe Parcial de Avances y Solicitud de Renovación de Proyecto - Convocatoria DFG 2024  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_dfg/2025_papiit_aviso_informe_parcial_avances_solicitud_renovcion_proyectos_convocatoria_dfg_2024.pdf
