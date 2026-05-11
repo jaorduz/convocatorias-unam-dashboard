@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 from email.mime.text import MIMEText
 from tempfile import template
 from typing import Any, Dict, Iterable, List, Optional
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, quote
 
 import feedparser
 import pandas as pd
@@ -513,9 +513,17 @@ def send_email_digest(filepath: str, recipients: list[str]) -> None:
 
     template = load_email_template("templates/email_template.html")
 
+    # Prepare a plain-text share body (URL-encoded) for the mailto link
+    try:
+        plain_share = "Boletín de Convocatorias\n\n" + body_md.strip() + f"\n\nAcceso al dashboard: {DASHBOARD_URL}"
+        share_body = quote(plain_share, safe='')
+    except Exception:
+        share_body = quote(f"Acceso al dashboard: {DASHBOARD_URL}", safe='')
+
     html_template = template \
         .replace("{{CONTENT}}", html_body) \
         .replace("{{DASHBOARD_URL}}", DASHBOARD_URL) \
+        .replace("{{SHARE_BODY}}", share_body) \
         .replace("{{SIGNATURE_NAME}}", SIGNATURE_NAME) \
         .replace("{{SIGNATURE_JO}}", SIGNATURE_JO) \
         .replace("{{SIGNATURE_INSTITUTION}}", SIGNATURE_INSTITUTION) \
