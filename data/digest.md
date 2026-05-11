@@ -1,6 +1,6 @@
 # Calls Digest (auto)
 
-Generated: 2026-05-04T14:50:33.322553+00:00
+Generated: 2026-05-11T15:10:39.328746+00:00
 
 
 ## Recently found
@@ -8,6 +8,22 @@ Generated: 2026-05-04T14:50:33.322553+00:00
 - Estado: — (open) — Convocatorias SNII  
   Source: Secihti Convocatorias SNII  
   Link: https://www.secihti.mx/snii/convocatorias-snii/
+
+- Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/normatividad/2026_programa_racionalidad_presupuestaria.pdf
+
+- Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/normatividad/2026_programa_racionalidad_presupuestaria.pdf
+
+- Estado: — (unknown) — Convocatorias TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Tecnm
+
+- Estado: — (unknown) — Convocatorias Externas  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas
 
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
@@ -68,19 +84,3 @@ Generated: 2026-05-04T14:50:33.322553+00:00
 - Estado: — (open) — Aviso - Resumen de Actividades - Convocatoria 2025  
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_resumen_actividades_convocatoria_2025.pdf
-
-- Estado: — (unknown) — Informe Final - Convocatorias 2023 y 2024  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2025_papime_aviso_informe_final_convocatorias_2023_2024.pdf
-
-- Estado: — (unknown) — Resumen de Actividades - Convocatoria 2024  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2025_papime_aviso_resumen_actividades_convocatoria_2024.pdf
-
-- Estado: — (unknown) — Informe Final de Proyecto - Convocatorias 2022 y 2023  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2024_papime_aviso_informe_final_convocatoria_2022_2023.pdf
-
-- Estado: — (unknown) — Resumen de Actividades - Convocatoria 2023  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2024_papime_aviso_resumen_actividades_convocatoria 2023.pdf
