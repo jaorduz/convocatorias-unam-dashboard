@@ -1,6 +1,6 @@
 # Calls Digest (auto)
 
-Generated: 2026-05-11T15:10:39.328746+00:00
+Generated: 2026-05-18T15:12:09.983811+00:00
 
 
 ## Recently found
@@ -13,17 +13,13 @@ Generated: 2026-05-11T15:10:39.328746+00:00
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/normatividad/2026_programa_racionalidad_presupuestaria.pdf
 
-- Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
+- Estado: — (unknown) — PAPIME - Apertura - Convocatoria 2027  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-apertura-convocatoria-2027
+
+- Estado: — (unknown) — Programa de Racionalidad Presupuestaria  
   Source: DGAPA UNAM PAPIIT Convocatorias  
-  Link: https://dgapa.unam.mx/images/papiit/normatividad/2026_programa_racionalidad_presupuestaria.pdf
-
-- Estado: — (unknown) — Convocatorias TecNM  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Tecnm
-
-- Estado: — (unknown) — Convocatorias Externas  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas
+  Link: https://dgapa.unam.mx/images/papiit/normatividad/programa_racionalidad_presupuestaria.pdf
 
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
@@ -84,3 +80,7 @@ Generated: 2026-05-11T15:10:39.328746+00:00
 - Estado: — (open) — Aviso - Resumen de Actividades - Convocatoria 2025  
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_resumen_actividades_convocatoria_2025.pdf
+
+- Estado: — (unknown) — Informe Final - Convocatorias 2023 y 2024  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/2025_papime_aviso_informe_final_convocatorias_2023_2024.pdf
