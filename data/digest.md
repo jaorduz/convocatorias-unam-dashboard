@@ -1,6 +1,6 @@
 # Calls Digest (auto)
 
-Generated: 2026-06-08T15:15:00.701517+00:00
+Generated: 2026-06-08T18:00:02.154998+00:00
 
 
 ## Recently found
@@ -8,10 +8,6 @@ Generated: 2026-06-08T15:15:00.701517+00:00
 - Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/normatividad/2026_programa_racionalidad_presupuestaria.pdf
-
-- Estado: — (unknown) — PAPIME - Apertura - Convocatoria 2027  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-apertura-convocatoria-2027
 
 - Estado: — (unknown) — Programa de Racionalidad Presupuestaria  
   Source: DGAPA UNAM PAPIIT Convocatorias  
@@ -24,6 +20,10 @@ Generated: 2026-06-08T15:15:00.701517+00:00
 - Estado: — (open) — CONVOCATORIA DEL PROGRAMA DE INSERCIÓN LABORAL 2026  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/programa-de-insercion-laboral-pil/convocatoria-del-programa-de-insercion-laboral-2026/
+
+- Estado: — (unknown) — PAPIME - Apertura - Convocatoria 2027  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-apertura-convocatoria-2027
 
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
@@ -53,34 +53,34 @@ Generated: 2026-06-08T15:15:00.701517+00:00
   Source: Secihti Convocatorias SNII  
   Link: https://secihti.mx/wp-content/uploads/snii/convocatorias/2026/Convocatoria_2026_Reconocimiento_SNII.pdf
 
-- Estado: — (unknown) — Solicitud de Proyectos Nuevos - Convocatorias 2026  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2025_papime_aviso_solicitud_proyectos_nuevos_convovatoria_2026.pdf
-
 - Estado: — (unknown) — Manual para el registro de participantes y becas  
   Source: DGAPA UNAM PAPIIT Convocatorias  
   Link: https://dgapa.unam.mx/images/papiit/becas/2026_manual_registro_participantes_becas.pdf
 
+- Estado: — (unknown) — Solicitud de Proyectos Nuevos - Convocatorias 2026  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/2025_papime_aviso_solicitud_proyectos_nuevos_convovatoria_2026.pdf
+
+- Estado: — (unknown) — Recomendaciones para presentar su informe final - Convocatorias 2023 y 2024 - Modalidades (a), (b) y (d)  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_papiit_recomendaciones_presentar_informe_final_convocatorias_2023_2024_modalidades_a_b_d.pdf
+
+- Estado: — (unknown) — Recomendaciones para presentar su Informe Final - Convocatorias 2023 y 2024 - Modalidades (c) y (e)  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_papiit_recomendaciones_presentar_informe_final_convocatorias_2023_2024_modalidad_grupo.pdf
+
 - Estado: — (unknown) — Convocatoria  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2026_papime_convocatoria.pdf
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2024_dfg/2024_papiit_dfg_convocatoria.pdf
 
-- Estado: — (open) — RUA - Convocatoria  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://www.rua.unam.mx/convocatoria/convocatoria-rua-2025.pdf
-
-- Estado: — (unknown) — Convocatoria  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2025_papime_convocatoria.pdf
+- Estado: — (unknown) — Recomendaciones para presentar su informe final - Convocatoria 2024 - Modalidades (a), (b) y (d)  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_dfg/2026_papiit_dfg_recomendaciones_presentar_informe_final_convocatoria_2024_modalidades_a_b_d.pdf
 
 - Estado: — (unknown) — Convocatoria  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2024_papime_convocatoria.pdf
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2023_papiit_convocatoria.pdf
 
-- Estado: — (unknown) — Aviso - Informe Final - Convocatorias 2024 y 2025  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_informe_final_convocatorias_2024_2025.pdf
-
-- Estado: — (open) — Aviso - Resumen de Actividades - Convocatoria 2025  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_resumen_actividades_convocatoria_2025.pdf
+- Estado: — (unknown) — Reporte de Avances y Solicitud de Renovación de Proyecto - Convocatoria - DFG - 2025  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_reporte_avances_solicitud_renovacion_proyecto_convocatoria_dfg_2025.pdf
