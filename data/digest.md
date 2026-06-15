@@ -1,13 +1,17 @@
 # Calls Digest (auto)
 
-Generated: 2026-06-08T18:00:02.154998+00:00
+Generated: 2026-06-15T15:50:16.836841+00:00
 
 
 ## Recently found
 
-- Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
+- Estado: — (open) — Convocatorias SNII  
+  Source: Secihti Convocatorias SNII  
+  Link: https://www.secihti.mx/snii/convocatorias-snii/
+
+- Estado: — (unknown) — PAPIME - Apertura - Convocatoria 2027  
   Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/normatividad/2026_programa_racionalidad_presupuestaria.pdf
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-apertura-convocatoria-2027
 
 - Estado: — (unknown) — Programa de Racionalidad Presupuestaria  
   Source: DGAPA UNAM PAPIIT Convocatorias  
@@ -21,9 +25,9 @@ Generated: 2026-06-08T18:00:02.154998+00:00
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/programa-de-insercion-laboral-pil/convocatoria-del-programa-de-insercion-laboral-2026/
 
-- Estado: — (unknown) — PAPIME - Apertura - Convocatoria 2027  
+- Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
   Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-apertura-convocatoria-2027
+  Link: https://dgapa.unam.mx/images/papime/normatividad/2026_programa_racionalidad_presupuestaria.pdf
 
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
@@ -80,7 +84,3 @@ Generated: 2026-06-08T18:00:02.154998+00:00
 - Estado: — (unknown) — Convocatoria  
   Source: DGAPA UNAM PAPIIT Convocatorias  
   Link: https://dgapa.unam.mx/images/papiit/2023_papiit_convocatoria.pdf
-
-- Estado: — (unknown) — Reporte de Avances y Solicitud de Renovación de Proyecto - Convocatoria - DFG - 2025  
-  Source: DGAPA UNAM PAPIIT Convocatorias  
-  Link: https://dgapa.unam.mx/images/papiit/2025_papiit_aviso_reporte_avances_solicitud_renovacion_proyecto_convocatoria_dfg_2025.pdf
