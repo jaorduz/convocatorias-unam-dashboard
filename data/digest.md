@@ -1,21 +1,33 @@
 # Calls Digest (auto)
 
-Generated: 2026-06-15T16:01:13.850958+00:00
+Generated: 2026-06-15T16:25:48.580651+00:00
 
 
 ## Recently found
 
-- Estado: — (open) — Abiertas Ingreso o Permanencia SNII - SECIHTI  
-  Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/snii/convocatorias-snii/abiertas-ingreso-o-permanencia-snii/
+- Estado: — (unknown) — Programas presupuestarios MIR TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programas_Presupuestarios
 
-- Estado: — (open) — Convocatoria Apoyos para Academias y Sociedades Científicas y promoción de Olimpiadas Nacionales del Conocimiento 2025  
+- Estado: — (unknown) — Proyectos Externos  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_Externos
+
+- Estado: — (open) — Capítulo Ciencia Básica y de Frontera 2026 - SECIHTI  
+  Source: COMECYT Convocatorias Artículos Científicos  
+  Link: https://secihti.mx/capitulo-ciencia-basica-y-de-frontera-2026/
+
+- Estado: — (unknown) — Ciencia Básica y de Frontera 2026: Bases específicas  
+  Source: COMECYT Convocatorias Artículos Científicos  
+  Link: https://secihti.mx/wp-content/uploads/ciencia_y_humanidades/becas_y_apoyos/2026/inv-cient-y-hum/cap-ciencia-bas-fron/CapituloCBF2026.pdf
+
+- Estado: — (unknown) — Programa Institucional 2025-2030  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
+
+- Estado: — (open) — Convocatoria Investigación Humanística 2025  
   Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/apoyos-para-academias-y-sociedades-cientificas-ciencias-y-humanidades/convocatoria-apoyos-para-academias-y-sociedades-cientificas-y-promocion-de-olimpiadas-nacionales-del-conocimiento-2025/
-
-- Estado: — (open) — Convocatoria Sinergia  
-  Source: COMECYT Convocatorias  
-  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Sinergia/2026/CONVOCATORIA%20SINERGIA%202026.pdf
+  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/investigacion-humanistica/convocatoria-investigacion-humanistica-2025/
 
 - Estado: — (unknown) — Aviso de privacidad simplificado  
   Source: COMECYT Convocatorias  
@@ -45,17 +57,17 @@ Generated: 2026-06-15T16:01:13.850958+00:00
   Source: Secihti Proyectos Estratégicos  
   Link: https://secihti.mx/ciencia-y-humanidades/proyectos-estrategicos-de-ciencia-y-humanidades/
 
-- Estado: — (unknown) — Descargar convocatoria  
-  Source: Secihti Convocatorias 2026  
+- Estado: — (unknown) — Convocatoria Nacional de Investigación Científica y Humanística 2026: bases generales  
+  Source: COMECYT Convocatorias Artículos Científicos  
   Link: https://secihti.mx/wp-content/uploads/2026/02/Convocatoria_CYH-20260220T232903.pdf
 
-- Estado: — (open) — Convocatoria Investigación Humanística 2025  
+- Estado: — (open) — Convocatoria Apoyos para Academias y Sociedades Científicas y promoción de Olimpiadas Nacionales del Conocimiento 2025  
   Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/investigacion-humanistica/convocatoria-investigacion-humanistica-2025/
+  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/apoyos-para-academias-y-sociedades-cientificas-ciencias-y-humanidades/convocatoria-apoyos-para-academias-y-sociedades-cientificas-y-promocion-de-olimpiadas-nacionales-del-conocimiento-2025/
 
-- Estado: — (open) — CONVOCATORIA.pdf  
-  Source: COMECYT Convocatorias Artículos Científicos  
-  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/ApoyoInvestigadoresDestacados/2026/convocatoria_articulos_2026.pdf
+- Estado: — (open) — Convocatoria Vinculación con Organismos Internacionales de Investigación 2025  
+  Source: Secihti Convocatorias  
+  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/vinculacion-con-organismos-internacionales/convocatoria-vinculacion-con-organismos-internacionales-de-investigacion-2025/
 
 - Estado: — (open) — Convocatoria Ciencia Básica y de Frontera 2025  
   Source: Secihti Convocatorias  
@@ -65,22 +77,10 @@ Generated: 2026-06-15T16:01:13.850958+00:00
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/divulgacion-comunitaria-de-la-ciencia-y-las-humanidades/convocatoria-divulgacion-comunitaria-de-la-ciencia-y-las-humanidades-2025/
 
-- Estado: — (open) — Convocatoria Vinculación con Organismos Internacionales de Investigación 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/vinculacion-con-organismos-internacionales/convocatoria-vinculacion-con-organismos-internacionales-de-investigacion-2025/
+- Estado: — (unknown) — Reglas de Operación.pdf  
+  Source: COMECYT Convocatorias Artículos Científicos  
+  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/ApoyoInvestigadoresDestacados/2026/Reglas_operacion.pdf
 
 - Estado: — (open) — Convocatoria Eventos Académicos Internacionales 2025  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/eventos-academicos-internacionales/convocatoria-eventos-academicos-internacionales-2025/
-
-- Estado: — (open) — Convocatoria Nacional de Investigación Científica y Humanística 2026 - SECIHTI  
-  Source: Secihti Convocatorias 2026  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/convocatoria-nacional-de-investigacion-cientifica-y-humanistica-2026/
-
-- Estado: — (open) — Convocatoria Ecos Nord 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/ecos-nord/convocatoria-ecos-nord-2026/
-
-- Estado: — (open) — CONVOCATORIA DEL PROGRAMA DE INSERCIÓN LABORAL 2026  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/programa-de-insercion-laboral-pil/convocatoria-del-programa-de-insercion-laboral-2026/

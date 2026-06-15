@@ -9,7 +9,8 @@ cd /Users/lagrange/Documents/GithubIEEE/AgentsJO/public/convocatorias-unam-dashb
 # source ~/miniconda3/bin/activate calls-agent
 
 echo "=== Running scraper ==="
-python run.py
+# python run.py
+python run.py --send-email
 
 echo "=== Preparing git ==="
 git add data/calls.csv data/digest.md
