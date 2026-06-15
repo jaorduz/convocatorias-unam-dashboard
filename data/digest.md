@@ -1,9 +1,13 @@
 # Calls Digest (auto)
 
-Generated: 2026-06-08T15:15:00.701517+00:00
+Generated: 2026-06-15T16:04:40.902104+00:00
 
 
 ## Recently found
+
+- Estado: — (open) — Convocatorias SNII  
+  Source: Secihti Convocatorias SNII  
+  Link: https://www.secihti.mx/snii/convocatorias-snii/
 
 - Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
   Source: DGAPA UNAM PAPIME Convocatorias  
@@ -80,7 +84,3 @@ Generated: 2026-06-08T15:15:00.701517+00:00
 - Estado: — (unknown) — Aviso - Informe Final - Convocatorias 2024 y 2025  
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_informe_final_convocatorias_2024_2025.pdf
-
-- Estado: — (open) — Aviso - Resumen de Actividades - Convocatoria 2025  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_resumen_actividades_convocatoria_2025.pdf
