@@ -10,3 +10,6 @@ data/special_recipients.csv
 
 data/calls.csv
 data/digest.md
+
+.DS_Store
+streamlit.log
