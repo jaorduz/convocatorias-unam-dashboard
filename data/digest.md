@@ -1,13 +1,9 @@
 # Calls Digest (auto)
 
-Generated: 2026-06-15T16:04:40.902104+00:00
+Generated: 2026-06-22T15:47:56.914944+00:00
 
 
 ## Recently found
-
-- Estado: — (open) — Convocatorias SNII  
-  Source: Secihti Convocatorias SNII  
-  Link: https://www.secihti.mx/snii/convocatorias-snii/
 
 - Estado: — (unknown) — Programa de Racionalidad Presupuestaria 2026  
   Source: DGAPA UNAM PAPIME Convocatorias  
@@ -17,9 +13,17 @@ Generated: 2026-06-15T16:04:40.902104+00:00
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-apertura-convocatoria-2027
 
+- Estado: — (open) — Convocatoria  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2027_papiit_convocatoria.pdf
+
 - Estado: — (unknown) — Programa de Racionalidad Presupuestaria  
   Source: DGAPA UNAM PAPIIT Convocatorias  
   Link: https://dgapa.unam.mx/images/papiit/normatividad/programa_racionalidad_presupuestaria.pdf
+
+- Estado: — (unknown) — PAPIIT - Convocatoria y Reglas de Operación 2027  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/109/154/papiit-convocatoria-y-reglas-de-operacion-2027
 
 - Estado: — (open) — CONVOCATORIA 2026 PARA EL RECONOCIMIENTO EN EL SISTEMA NACIONAL DE INVESTIGADORAS E INVESTIGADORES EN EL MARCO DE LAS CÁTEDRAS DE LA DIÁSPORA MEXICANA  
   Source: Secihti Convocatorias  
@@ -28,6 +32,10 @@ Generated: 2026-06-15T16:04:40.902104+00:00
 - Estado: — (open) — CONVOCATORIA DEL PROGRAMA DE INSERCIÓN LABORAL 2026  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/programa-de-insercion-laboral-pil/convocatoria-del-programa-de-insercion-laboral-2026/
+
+- Estado: — (unknown) — Convocatorias de Ingreso  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Admision
 
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
@@ -76,11 +84,3 @@ Generated: 2026-06-15T16:04:40.902104+00:00
 - Estado: — (unknown) — Convocatoria  
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/2025_papime_convocatoria.pdf
-
-- Estado: — (unknown) — Convocatoria  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2024_papime_convocatoria.pdf
-
-- Estado: — (unknown) — Aviso - Informe Final - Convocatorias 2024 y 2025  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2026_papime_aviso_informe_final_convocatorias_2024_2025.pdf
