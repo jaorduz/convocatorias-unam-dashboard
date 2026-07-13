@@ -1,6 +1,6 @@
 # Calls Digest (auto)
 
-Generated: 2026-07-06T15:12:05.176543+00:00
+Generated: 2026-07-13T16:35:58.040042+00:00
 
 
 ## Recently found
@@ -32,18 +32,6 @@ Generated: 2026-07-06T15:12:05.176543+00:00
 - Estado: — (open) — CONVOCATORIA DEL PROGRAMA DE INSERCIÓN LABORAL 2026  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/programa-de-insercion-laboral-pil/convocatoria-del-programa-de-insercion-laboral-2026/
-
-- Estado: — (unknown) — Convocatorias de Ingreso  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Admision
-
-- Estado: — (unknown) — Convocatorias Externas  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas
-
-- Estado: — (unknown) — Proyectos Externos  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_Externos
 
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
@@ -84,3 +72,15 @@ Generated: 2026-07-06T15:12:05.176543+00:00
 - Estado: — (unknown) — Convocatoria  
   Source: DGAPA UNAM PAPIME Convocatorias  
   Link: https://dgapa.unam.mx/images/papime/2026_papime_convocatoria.pdf
+
+- Estado: — (open) — RUA - Convocatoria  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://www.rua.unam.mx/convocatoria/convocatoria-rua-2025.pdf
+
+- Estado: — (unknown) — Convocatoria  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/2025_papime_convocatoria.pdf
+
+- Estado: — (unknown) — Convocatoria  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/2024_papime_convocatoria.pdf
