@@ -1,13 +1,13 @@
 # Calls Digest (auto)
 
-Generated: 2026-07-27T16:21:24.184204+00:00
+Generated: 2026-08-03T16:27:22.808943+00:00
 
 
 ## Recently found
 
-- Estado: — (open) — Convocatorias SNII  
+- Estado: — (unknown) — Convocatoria 2026 para el Reconocimiento en el SNII en el marco de las Cátedras de la Diáspora Mexicana  
   Source: Secihti Convocatorias SNII  
-  Link: https://www.secihti.mx/snii/convocatorias-snii/
+  Link: https://secihti.mx/wp-content/uploads/snii/convocatorias/2026/Convocatoria-2026-para-el-Reconocimiento-en-el-SNII-en-el-Marco-de-las-Catedras-de-la-Diaspora-Mexicana-20260605T062712.pdf
 
 - Estado: — (unknown) — Convocatoria  
   Source: DGAPA UNAM PAPIME Convocatorias  
