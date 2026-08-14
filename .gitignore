@@ -13,3 +13,4 @@ data/digest.md
 
 .DS_Store
 streamlit.log
+data/calls.db

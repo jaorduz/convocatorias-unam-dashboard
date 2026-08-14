@@ -3,6 +3,8 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import altair as alt
+import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 # =========================
@@ -129,6 +131,39 @@ if "detected_language" not in df.columns:
 st.title("Sistema Institucional de Monitoreo de Convocatorias")
 st.caption("FES Acatlán-UNAM | Inteligencia Estratégica para la Investigación")
 
+# Small 'Copy link' button — copies current page URL to clipboard via browser
+components.html(
+        """
+        <div style="display:flex;align-items:center;gap:8px">
+            <button id="copyBtn" style="background:#E6EEF8;color:#002855;padding:6px 10px;border-radius:6px;border:0;font-weight:700;cursor:pointer">Copiar enlace</button>
+            <span id="copyMsg" style="color:#334e68;font-size:13px;"></span>
+        </div>
+        <script>
+            const btn = document.getElementById('copyBtn');
+            const msg = document.getElementById('copyMsg');
+            btn.addEventListener('click', async () => {
+                try {
+                    const url = window.location.href;
+                    await navigator.clipboard.writeText(url);
+                    msg.innerText = 'Enlace copiado al portapapeles.';
+                    btn.innerText = '¡Copiado!';
+                    setTimeout(() => { btn.innerText = 'Copiar enlace'; msg.innerText = ''; }, 2200);
+                } catch (e) {
+                    // fallback
+                    const input = document.createElement('input');
+                    document.body.appendChild(input);
+                    input.value = window.location.href;
+                    input.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(input);
+                    msg.innerText = 'Enlace copiado al portapapeles.';
+                }
+            });
+        </script>
+        """,
+        height=48,
+)
+
 # =========================
 # BUSCADOR
 # =========================
@@ -232,22 +267,27 @@ df_main["Descripción"] = df_main["snippet"].fillna("").apply(lambda x: wrap_tex
 
 df_closed["Título"] = df_closed["title"].fillna("").apply(lambda x: wrap_text(x, 45))
 
-# =========================
-# KPIs
-# =========================
-total_convocatorias = len(df)
-num_vigentes = len(df_main)
-sin_fecha = df_main["detected_deadline"].isna().sum()
-
-k1, k2, k3 = st.columns(3)
-k1.metric("Total encontradas", total_convocatorias)
-k2.metric("Convocatorias vigentes", num_vigentes)
-k3.metric("Sin fecha límite", int(sin_fecha))
+# (KPIs removed here — will display after the main table)
 
 # =========================
-# TABLA PRINCIPAL
-# =========================
-df_visual = df_main.rename(
+# SIDEBAR: filtros rápidos
+with st.sidebar:
+    st.header("Filtros rápidos")
+    timeframe = st.radio("Rango", ("Todos", "Próximos 7 días", "Próximos 30 días"))
+    show_only_with_date = st.checkbox("Mostrar solo con fecha conocida", value=False)
+
+# aplicar filtros al conjunto de convocatorias vigentes
+df_main_filtered = df_main.copy()
+if timeframe == "Próximos 7 días":
+    df_main_filtered = df_main_filtered[df_main_filtered["days_remaining"].notna() & (df_main_filtered["days_remaining"] <= 7) & (df_main_filtered["days_remaining"] >= 0)]
+elif timeframe == "Próximos 30 días":
+    df_main_filtered = df_main_filtered[df_main_filtered["days_remaining"].notna() & (df_main_filtered["days_remaining"] <= 30) & (df_main_filtered["days_remaining"] >= 0)]
+
+if show_only_with_date:
+    df_main_filtered = df_main_filtered[df_main_filtered["detected_deadline"].notna()]
+
+# Tabla principal (filtrada)
+df_visual = df_main_filtered.rename(
     columns={
         "source": "Entidad convocante",
         "url": "Enlace",
@@ -283,6 +323,42 @@ st.dataframe(
 )
 
 # =========================
+# KPIs (for filtered data) and CSV download
+total_in_table = len(df_visual)
+num_vigentes = len(df_main_filtered)
+sin_fecha = int(df_main_filtered["detected_deadline"].isna().sum())
+
+k1, k2, k3 = st.columns(3)
+k1.metric("En tabla", total_in_table)
+k2.metric("Vigentes (filtradas)", num_vigentes)
+k3.metric("Sin fecha límite", sin_fecha)
+
+# Descargar CSV filtrado
+csv_bytes = df_visual.to_csv(index=False).encode("utf-8")
+st.download_button("Descargar CSV (filtrado)", data=csv_bytes, file_name="convocatorias_filtradas.csv", mime="text/csv")
+
+# =========================
+# GRÁFICO (Altair) — mostrado después de tabla/stats
+st.markdown("## 📊 Distribución por Entidad")
+counts = df_main_filtered["source"].fillna("—").value_counts().reset_index()
+if not counts.empty:
+    counts.columns = ["Entidad convocante", "count"]
+    chart = (
+        alt.Chart(counts)
+        .mark_bar()
+        .encode(
+            x=alt.X("count:Q", title="Número de convocatorias"),
+            y=alt.Y("Entidad convocante:N", sort="-x"),
+            color=alt.Color("count:Q", scale=alt.Scale(scheme="blues")),
+            tooltip=[alt.Tooltip("Entidad convocante:N"), alt.Tooltip("count:Q")],
+        )
+        .properties(height=400)
+    )
+    st.altair_chart(chart, use_container_width=True)
+else:
+    st.info("No hay datos para mostrar en el rango seleccionado.")
+
+# =========================
 # HISTÓRICO
 # =========================
 with st.expander("Ver convocatorias cerradas (histórico)"):
@@ -314,9 +390,3 @@ with st.expander("Ver convocatorias cerradas (histórico)"):
         hide_index=True,
         width="stretch",
     )
-
-# =========================
-# GRÁFICO
-# =========================
-st.markdown("## 📊 Distribución por Entidad")
-st.bar_chart(df["source"].value_counts())

@@ -5,3 +5,4 @@ PyYAML
 requests
 beautifulsoup4
 feedparser
+altair

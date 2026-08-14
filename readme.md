@@ -1,3 +1,52 @@
+# Convocatorias Dashboard & Weekly Digest
+
+This project collects funding calls, exposes a Streamlit dashboard, and can send a weekly email digest.
+
+Quick setup
+
+1. Create a virtual environment and install dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+2. Provide environment variables (prefer a `.env` file or system env):
+
+- `EMAIL_USER` — sender email address
+- `EMAIL_PASS` — SMTP password or app password
+- Optional: `EMAIL_RECIPIENTS` — comma-separated recipients
+
+Run dashboard locally
+
+```bash
+streamlit run dashboard.py
+```
+
+Send email manually
+
+```bash
+python run.py --send-email
+```
+
+Scheduling weekly (cron)
+
+Edit your crontab (`crontab -e`) and add this line to run every Monday at 09:00 (adjust paths):
+
+```
+0 9 * * 1 /Users/lagrange/Documents/GithubIEEE/AgentsJO/public/convocatorias-unam-dashboard/run_send_email.sh >> /tmp/convocatorias_send.log 2>&1
+```
+
+Alternatives
+
+- On macOS, you can create a `launchd` job instead of cron for better integration.
+- Or embed `APScheduler` into a long-running process if you prefer Python-managed scheduling.
+
+Notes
+
+- The dashboard improvements include an Altair bar chart and sidebar filters.
+- Keep `EMAIL_PASS` secure (use system keychain or environment configuration in production).
 # Sistema Institucional de Monitoreo de Convocatorias
 ### Facultad de Estudios Superiores Acatlán – UNAM
 
