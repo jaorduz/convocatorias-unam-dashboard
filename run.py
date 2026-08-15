@@ -478,6 +478,16 @@ SIGNATURE_CONTACT = "Teléfono: (+52) 555 623 1750. Ext.: 38903"
 DASHBOARD_URL = "https://smcfesacatlanunam.streamlit.app/"
 
 
+def build_share_email_link(dashboard_url: str) -> str:
+    subject = "Boletín de Convocatorias"
+    body = (
+        "Le comparto el Boletín de Convocatorias del Sistema Institucional de Monitoreo de Convocatorias:\n\n"
+        f"{dashboard_url}\n\n"
+        "Puede revisar las convocatorias más relevantes y acceder al detalle completo desde el dashboard."
+    )
+    return f"mailto:?subject={quote(subject, safe='')}&body={quote(body, safe='')}"
+
+
 def load_email_template(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
@@ -513,17 +523,12 @@ def send_email_digest(filepath: str, recipients: list[str]) -> None:
 
     template = load_email_template("templates/email_template.html")
 
-    # Prepare a plain-text share body (URL-encoded) for the mailto link
-    try:
-        plain_share = "Boletín de Convocatorias\n\n" + body_md.strip() + f"\n\nAcceso al dashboard: {DASHBOARD_URL}"
-        share_body = quote(plain_share, safe='')
-    except Exception:
-        share_body = quote(f"Acceso al dashboard: {DASHBOARD_URL}", safe='')
+    share_link = build_share_email_link(DASHBOARD_URL)
 
     html_template = template \
         .replace("{{CONTENT}}", html_body) \
         .replace("{{DASHBOARD_URL}}", DASHBOARD_URL) \
-        .replace("{{SHARE_BODY}}", share_body) \
+        .replace("{{SHARE_LINK}}", share_link) \
         .replace("{{SIGNATURE_NAME}}", SIGNATURE_NAME) \
         .replace("{{SIGNATURE_JO}}", SIGNATURE_JO) \
         .replace("{{SIGNATURE_INSTITUTION}}", SIGNATURE_INSTITUTION) \
