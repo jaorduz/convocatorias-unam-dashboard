@@ -131,38 +131,8 @@ if "detected_language" not in df.columns:
 st.title("Sistema Institucional de Monitoreo de Convocatorias")
 st.caption("FES Acatlán-UNAM | Inteligencia Estratégica para la Investigación")
 
-# Small 'Copy link' button — copies current page URL to clipboard via browser
-components.html(
-        """
-        <div style="display:flex;align-items:center;gap:8px">
-            <button id="copyBtn" style="background:#E6EEF8;color:#002855;padding:6px 10px;border-radius:6px;border:0;font-weight:700;cursor:pointer">Copiar enlace</button>
-            <span id="copyMsg" style="color:#334e68;font-size:13px;"></span>
-        </div>
-        <script>
-            const btn = document.getElementById('copyBtn');
-            const msg = document.getElementById('copyMsg');
-            btn.addEventListener('click', async () => {
-                try {
-                    const url = window.location.href;
-                    await navigator.clipboard.writeText(url);
-                    msg.innerText = 'Enlace copiado al portapapeles.';
-                    btn.innerText = '¡Copiado!';
-                    setTimeout(() => { btn.innerText = 'Copiar enlace'; msg.innerText = ''; }, 2200);
-                } catch (e) {
-                    // fallback
-                    const input = document.createElement('input');
-                    document.body.appendChild(input);
-                    input.value = window.location.href;
-                    input.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(input);
-                    msg.innerText = 'Enlace copiado al portapapeles.';
-                }
-            });
-        </script>
-        """,
-        height=48,
-)
+# Simple share link button removed to avoid clipboard issues in Streamlit's iframe environment.
+st.caption("Dashboard de convocatorias")
 
 # =========================
 # BUSCADOR

@@ -1,17 +1,21 @@
 # Calls Digest (auto)
 
-Generated: 2026-08-14T02:13:50.748430+00:00
+Generated: 2026-08-15T00:00:09.712184+00:00
 
 
 ## Recently found
 
-- Estado: — (unknown) — Convocatorias Ciencia y Humanidades  
-  Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/convocatoria_categoria/ciencias-y-humanidades/
+- Estado: — (unknown) — Apoyo Complementario  
+  Source: Secihti Convocatorias  
+  Link: https://secihti.mx/convocatoria_categoria/becas-al-extranjero/apoyo-complementario/
 
 - Estado: — (unknown) — Estancias Técnicas en Japón  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria_categoria/becas-al-extranjero/estancias-tecnicas-en-japon/
+
+- Estado: — (unknown) — Convocatorias Ciencia y Humanidades  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/convocatoria_categoria/ciencias-y-humanidades/
 
 - Estado: — (unknown) — Convocatoria 2026 para el Reconocimiento en el SNII en el marco de las Cátedras de la Diáspora Mexicana  
   Source: Secihti Convocatorias SNII  
@@ -80,7 +84,3 @@ Generated: 2026-08-14T02:13:50.748430+00:00
 - Estado: — (closed) — Fondo para la Investigación Científica y Desarrollo Tecnológico del Estado de México | Consejo Mexiquense de Ciencia y Tecnología  
   Source: COMECYT Convocatorias  
   Link: https://comecyt.edomex.gob.mx/fondo-investigacion-cientifica-desarrollo-tecnologico
-
-- Estado: — (unknown) — Impulso a la investigación  
-  Source: DGAPA UNAM Convocatorias  
-  Link: https://dgapa.unam.mx/index.php/impulso-a-la-investigacion
