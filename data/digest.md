@@ -1,15 +1,35 @@
 # Calls Digest (auto)
 
+<<<<<<< HEAD
 Generated: 2026-08-15T00:00:09.712184+00:00
+=======
+Generated: 2026-08-10T15:01:20.866634+00:00
+>>>>>>> refs/remotes/origin/main
 
 
 ## Recently found
 
+<<<<<<< HEAD
 - Estado: — (unknown) — Apoyo Complementario  
+=======
+- Estado: — (unknown) — Convocatoria 2026 para el Reconocimiento en el SNII en el marco de las Cátedras de la Diáspora Mexicana  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/wp-content/uploads/snii/convocatorias/2026/Convocatoria-2026-para-el-Reconocimiento-en-el-SNII-en-el-Marco-de-las-Catedras-de-la-Diaspora-Mexicana-20260605T062712.pdf
+
+- Estado: — (open) — Convocatoria para el reconocimiento de Revistas Nacionales de Acceso Abierto en el Sistema Nacional de Publicaciones Científicas y Humanísticas 2026  
+  Source: Secihti Convocatorias  
+  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/convocatoria-para-el-reconocimiento-de-revistas-nacionales-de-acceso-abierto-en-el-sistema-nacional-de-publicaciones-cientificas-y-humanisticas-2026/
+
+- Estado: — (open) — CONVOCATORIA 2026 PARA EL RECONOCIMIENTO EN EL SISTEMA NACIONAL DE INVESTIGADORAS E INVESTIGADORES EN EL MARCO DE LAS CÁTEDRAS DE LA DIÁSPORA MEXICANA  
+>>>>>>> refs/remotes/origin/main
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria_categoria/becas-al-extranjero/apoyo-complementario/
 
+<<<<<<< HEAD
 - Estado: — (unknown) — Estancias Técnicas en Japón  
+=======
+- Estado: — (open) — Convocatoria del Programa de Inserción Laboral 2026  
+>>>>>>> refs/remotes/origin/main
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria_categoria/becas-al-extranjero/estancias-tecnicas-en-japon/
 
@@ -28,6 +48,10 @@ Generated: 2026-08-15T00:00:09.712184+00:00
 - Estado: — (open) — Convocatoria para el reconocimiento de Revistas Nacionales de Acceso Abierto en el Sistema Nacional de Publicaciones Científicas y Humanísticas 2026  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/convocatoria-para-el-reconocimiento-de-revistas-nacionales-de-acceso-abierto-en-el-sistema-nacional-de-publicaciones-cientificas-y-humanisticas-2026/
+
+- Estado: — (unknown) — Proyectos Aprobados de Ciencia Básica y de Frontera 2026  
+  Source: COMECYT Convocatorias Artículos Científicos  
+  Link: https://secihti.mx/wp-content/uploads/ciencia_y_humanidades/becas_y_apoyos/2026/inv-cient-y-hum/cap-ciencia-bas-fron/CBF2026_Lista1_resultados.pdf
 
 - Estado: — (unknown) — Proyectos Aprobados de Ciencia Básica y de Frontera 2026  
   Source: COMECYT Convocatorias Artículos Científicos  
