@@ -4,86 +4,116 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Boletín de Convocatorias</title>
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; outline: none; text-decoration: none; }
+    @media only screen and (max-width: 620px) {
+      .email-shell { width: 100% !important; }
+      .mobile-padding { padding-left: 12px !important; padding-right: 12px !important; }
+      .stack-column { display: block !important; width: 100% !important; }
+      .stack-center { text-align: center !important; }
+      .button-cell {
+        display: block !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+        padding-bottom: 10px !important;
+      }
+      .button-link {
+        display: block !important;
+        width: auto !important;
+        text-align: center !important;
+      }
+    }
+  </style>
 </head>
 <body style="margin:0;padding:0;background-color:#f3f6f9;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color:#102a43;">
 
-  <center style="width:100%;">
-    <div style="max-width:760px;margin:0 auto;padding:28px 18px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background-color:#f3f6f9;">
+    <tr>
+      <td align="center" style="padding:28px 18px;">
+        <table class="email-shell" role="presentation" width="760" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:760px;max-width:760px;">
 
-      <!-- Header -->
-      <table role="presentation" width="100%" style="border-collapse:collapse;">
-        <tr>
-          <td style="background:#002855;padding:20px;border-radius:12px 12px 0 0;color:#fff;">
-            <div style="display:flex;align-items:center;gap:12px;">
-              <div style="font-weight:800;font-size:18px;">FES Acatlán – UNAM</div>
-              <div style="flex:1;color:#cfe3ff;font-size:13px;">Sistema Institucional de Monitoreo de Convocatorias</div>
-              <div style="font-size:13px;background:#B38E2D;padding:8px 12px;border-radius:8px;color:#fff;font-weight:700;">Boletín semanal</div>
-            </div>
-          </td>
-        </tr>
-      </table>
+          <tr>
+            <td class="mobile-padding" style="background:#002855;padding:20px 24px;border-radius:12px 12px 0 0;color:#ffffff;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                <tr>
+                  <td class="stack-column" style="font-weight:800;font-size:18px;line-height:1.4;color:#ffffff;">FES Acatlán – UNAM</td>
+                  <td class="stack-column stack-center" style="padding-left:12px;color:#cfe3ff;font-size:13px;line-height:1.4;">Sistema Institucional de Monitoreo de Convocatorias</td>
+                  <td class="stack-column stack-center" align="right" style="padding-left:12px;">
+                    <div style="display:inline-block;background:#B38E2D;padding:8px 12px;border-radius:8px;color:#ffffff;font-weight:700;font-size:13px;line-height:1.4;">Boletín semanal</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-      <!-- Intro / Hero -->
-      <table role="presentation" width="100%" style="border-collapse:collapse;background:#ffffff;padding:0 0 18px 0;border-radius:0 0 12px 12px;box-shadow:0 6px 24px rgba(16,42,67,0.06);margin-top:-6px;">
-        <tr>
-          <td style="padding:20px 22px;">
-            <h1 style="margin:0 0 10px 0;font-size:20px;color:#002855;">Resumen semanal — Convocatorias seleccionadas</h1>
-            <p style="margin:0 0 14px 0;color:#334e68;line-height:1.5;font-size:14px;">
-              Compartimos las convocatorias más relevantes detectadas por el sistema. Revise las fechas límite y el enlace al detalle. Si desea recibir este boletín en otros correos, puede actualizar los destinatarios en el panel del sistema.
-            </p>
+          <tr>
+            <td class="mobile-padding" style="background:#ffffff;padding:20px 22px 18px 22px;border-radius:0 0 12px 12px;box-shadow:0 6px 24px rgba(16,42,67,0.06);">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                <tr>
+                  <td>
+                    <h1 style="margin:0 0 10px 0;font-size:20px;color:#002855;line-height:1.3;">Resumen semanal — Convocatorias seleccionadas</h1>
+                    <p style="margin:0 0 14px 0;color:#334e68;line-height:1.5;font-size:14px;">
+                      Compartimos las convocatorias más relevantes detectadas por el sistema. Revise las fechas límite y el enlace al detalle. Si desea recibir este boletín en otros correos, puede actualizar los destinatarios en el panel del sistema.
+                    </p>
 
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
-              <a href="{{DASHBOARD_URL}}" style="background:#002855;color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Ver dashboard</a>
-              <a href="{{SHARE_LINK}}" style="background:#E6EEF8;color:#002855;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Compartir boletín</a>
-            </div>
-          </td>
-        </tr>
-      </table>
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                      <tr>
+                        <td class="button-cell" style="padding:0 10px 0 0;">
+                          <a class="button-link" href="{{DASHBOARD_URL}}" style="background:#002855;color:#ffffff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;line-height:1.4;">Ver dashboard</a>
+                        </td>
+                        <td class="button-cell" style="padding:0;">
+                          <a class="button-link" href="{{SHARE_LINK}}" style="background:#E6EEF8;color:#002855;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;line-height:1.4;">Compartir boletín</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-      <!-- Main content area -->
-      <table role="presentation" width="100%" style="border-collapse:collapse;margin-top:16px;">
-        <tr>
-          <td style="vertical-align:top;padding:0 0 18px 0;">
-            <div style="background:#ffffff;padding:18px;border-radius:10px;box-shadow:0 3px 12px rgba(16,42,67,0.04);">
+          <tr>
+            <td style="padding-top:16px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#ffffff;border-radius:10px;box-shadow:0 3px 12px rgba(16,42,67,0.04);">
+                <tr>
+                  <td style="padding:18px;">
+                    <div style="color:#102a43;font-size:14px;line-height:1.6;">
+                      {{CONTENT}}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-              <!-- Dynamic content inserted here (markdown converted to basic HTML) -->
-              <div style="color:#102a43;font-size:14px;line-height:1.6;">
-                {{CONTENT}}
-              </div>
+          <tr>
+            <td style="padding-top:14px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                <tr>
+                  <td style="background:#ffffff;padding:14px;border-radius:10px;box-shadow:0 2px 8px rgba(16,42,67,0.04);">
+                    <div style="font-weight:800;color:#0b2948;line-height:1.4;">{{SIGNATURE_NAME}}</div>
+                    <div style="margin-top:4px;color:#335a7f;line-height:1.5;">{{SIGNATURE_JO}}</div>
+                    <div style="margin-top:6px;color:#64748b;line-height:1.5;">{{SIGNATURE_INSTITUTION}}</div>
+                    <div style="margin-top:8px;color:#475569;font-size:13px;line-height:1.5;">{{SIGNATURE_CONTACT}}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-            </div>
-          </td>
-        </tr>
-      </table>
+          <tr>
+            <td style="padding:12px 6px 0 6px;font-size:12px;color:#94a3b8;line-height:1.5;text-align:center;">
+              Este mensaje fue generado automáticamente por el Sistema Institucional de Monitoreo de Convocatorias.<br>
+              Si no desea recibir estos correos, actualice la lista de destinatarios en el panel o contacte a la Secretaría Académica.
+            </td>
+          </tr>
 
-      <!-- Signature / Contact -->
-      <table role="presentation" width="100%" style="border-collapse:collapse;margin-top:14px;">
-        <tr>
-          <td style="padding:0 0 18px 0;">
-            <div style="display:flex;gap:12px;align-items:center;">
-              <div style="flex:1;background:#fff;padding:14px;border-radius:10px;box-shadow:0 2px 8px rgba(16,42,67,0.04);">
-                <div style="font-weight:800;color:#0b2948;">{{SIGNATURE_NAME}}</div>
-                <div style="margin-top:4px;color:#335a7f;">{{SIGNATURE_JO}}</div>
-                <div style="margin-top:6px;color:#64748b;">{{SIGNATURE_INSTITUTION}}</div>
-                <div style="margin-top:8px;color:#475569;font-size:13px;">{{SIGNATURE_CONTACT}}</div>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-
-      <!-- Footer -->
-      <table role="presentation" width="100%" style="border-collapse:collapse;margin-top:8px;">
-        <tr>
-          <td style="padding:12px 6px 0 6px;font-size:12px;color:#94a3b8;text-align:center;">
-            <div>Este mensaje fue generado automáticamente por el Sistema Institucional de Monitoreo de Convocatorias.</div>
-            <div style="margin-top:6px;">Si no desea recibir estos correos, actualice la lista de destinatarios en el panel o contacte a la Secretaría Académica.</div>
-          </td>
-        </tr>
-      </table>
-
-    </div>
-  </center>
+        </table>
+      </td>
+    </tr>
+  </table>
 
 </body>
 </html>

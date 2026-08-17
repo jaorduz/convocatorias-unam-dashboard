@@ -1,20 +1,20 @@
 # Calls Digest (auto)
 
-Generated: 2026-08-17T14:29:01.086813+00:00
+Generated: 2026-08-15T02:27:35.309657+00:00
 
 
 ## Recently found
 
-- Estado: — (open) — Convocatorias SNII  
-  Source: Secihti Convocatorias SNII  
-  Link: https://www.secihti.mx/snii/convocatorias-snii/
+- Estado: — (unknown) — Convocatorias Desarrollo Tecnológico, Vinculación e Innovación  
+  Source: Secihti Convocatorias  
+  Link: https://secihti.mx/convocatoria_categoria/desarrollo-tecnologico-vinculacion-e-innovacion/
 
 - Estado: — (unknown) — Apoyo Complementario  
   Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria_categoria/becas-al-extranjero/apoyo-complementario/
 
 - Estado: — (unknown) — Convocatorias Ciencia y Humanidades  
-  Source: Secihti Convocatorias SNII  
+  Source: Secihti Convocatorias  
   Link: https://secihti.mx/convocatoria_categoria/ciencias-y-humanidades/
 
 - Estado: — (unknown) — Estancias Técnicas en Japón  
@@ -37,50 +37,50 @@ Generated: 2026-08-17T14:29:01.086813+00:00
   Source: COMECYT Convocatorias Artículos Científicos  
   Link: https://secihti.mx/wp-content/uploads/ciencia_y_humanidades/becas_y_apoyos/2026/inv-cient-y-hum/cap-ciencia-bas-fron/CBF2026_Lista1_resultados.pdf
 
-- Estado: — (open) — Convocatorias SNII  
-  Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/snii/convocatorias-snii/
-
-- Estado: — (unknown) — Convocatorias TecNM  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_TecNM_Academicos
-
-- Estado: — (unknown) — Convocatorias Externas  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas_Academicos
-
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=Programas_Presupuestarios
-
-- Estado: — (unknown) — Programa Institucional 2025-2030  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
 
 - Estado: — (unknown) — Proyectos TecNM  
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
 
-- Estado: — (open) — Abiertas Ingreso o Permanencia SNII - SECIHTI  
-  Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/snii/convocatorias-snii/abiertas-ingreso-o-permanencia-snii/
+- Estado: — (unknown) — Programa Institucional 2025-2030  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
 
-- Estado: — (open) — Proyectos sin Mediar Convocatoria  
-  Source: Secihti Convocatorias 2026  
-  Link: https://secihti.mx/tecnologias-e-innovacion/proyectos-sin-mediar-convocatoria/
+- Estado: — (unknown) — Convocatorias Externas  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas_Academicos
+
+- Estado: — (unknown) — Convocatorias TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_TecNM_Academicos
 
 - Estado: — (open) — Convocatorias SNII  
   Source: Secihti Convocatorias SNII  
-  Link: https://enbc.secihti.mx/snii/convocatorias-snii/
+  Link: https://secihti.mx/snii/convocatorias-snii/
 
-- Estado: — (unknown) — Convocatoria 2026 para el Reconocimiento en el Sistema Nacional de Investigadoras e Investigadores  
-  Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/wp-content/uploads/snii/convocatorias/2026/Convocatoria_2026_Reconocimiento_SNII.pdf
+- Estado: — (unknown) — Convocatoria Investigación Humanística 2025  
+  Source: Secihti Convocatorias  
+  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/investigacion-humanistica/convocatoria-investigacion-humanistica-2025/
 
-- Estado: — (unknown) — Programas Institucionales (folleto)  
-  Source: DGAPA UNAM Convocatorias  
-  Link: https://dgapa.unam.mx/images/dgapa-manual-organizacion/dgapa_programas_institucionales.pdf
+- Estado: — (unknown) — Reglas de Operación.pdf  
+  Source: COMECYT Convocatorias Artículos Científicos  
+  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/ApoyoInvestigadoresDestacados/2026/Reglas_operacion.pdf
 
-- Estado: — (unknown) — Convocatoria  
-  Source: DGAPA UNAM PAPIME Convocatorias  
-  Link: https://dgapa.unam.mx/images/papime/2026_papime_convocatoria.pdf
+- Estado: — (open) — Convocatoria Sinergia  
+  Source: COMECYT Convocatorias  
+  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Sinergia/2026/CONVOCATORIA%20SINERGIA%202026.pdf
+
+- Estado: — (unknown) — Aviso de privacidad simplificado  
+  Source: COMECYT Convocatorias  
+  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Investigacion_Cientifica/2025/Aviso%20de%20Privacidad%20Simplificado%20para%20el%20manejo%20de%20datos%20personales%20del%20Financiamiento%20de%20la%20convocatoria%20Cient%C3%ADfikas%20Mexiquenses.pdf
+
+- Estado: — (open) — Convocatoria Científikas  
+  Source: COMECYT Convocatorias  
+  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Investigacion_Cientifica/2026/OCS.307.2026-CE-CONVOCATORIA%20CIENTIFIKAS%20COMECyT-2.pdf
+
+- Estado: — (unknown) — Apoyo empresarial  
+  Source: COMECYT Convocatorias Artículos Científicos  
+  Link: https://comecyt.edomex.gob.mx/apoyo-empresarial
