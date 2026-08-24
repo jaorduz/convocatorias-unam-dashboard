@@ -1,9 +1,21 @@
 # Calls Digest (auto)
 
-Generated: 2026-08-15T02:27:35.309657+00:00
+Generated: 2026-08-24T14:42:08.869333+00:00
 
 
 ## Recently found
+
+- Estado: — (open) — Convocatorias SNII  
+  Source: Secihti Convocatorias SNII  
+  Link: https://www.secihti.mx/snii/convocatorias-snii/
+
+- Estado: — (unknown) — Recomendaciones para presentar su reporte de avances y solicitud de renovación - Convocatoria 2026 - 1ª Renovación  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/documentos_recomendaciones/2026_papiit_recomendaciones_presentar_reporte_avances_solicitud_renovacion_convocatorias_papiit_2026_papiit_dfg_2026_primera_renovacion.pdf
+
+- Estado: — (unknown) — Recomendaciones para presentar su informe de avances y solicitud de renovación - Convocatoria 2025 - 2ª Renovación  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/documentos_recomendaciones/2026_papiit_recomendaciones_presentar_informe_avances_solicitud_renovacion_convocatorias_papiit_2025_papiit_dfg_2025_segunda_renovacion.pdf
 
 - Estado: — (unknown) — Convocatorias Desarrollo Tecnológico, Vinculación e Innovación  
   Source: Secihti Convocatorias  
@@ -37,50 +49,38 @@ Generated: 2026-08-15T02:27:35.309657+00:00
   Source: COMECYT Convocatorias Artículos Científicos  
   Link: https://secihti.mx/wp-content/uploads/ciencia_y_humanidades/becas_y_apoyos/2026/inv-cient-y-hum/cap-ciencia-bas-fron/CBF2026_Lista1_resultados.pdf
 
-- Estado: — (unknown) — Programas presupuestarios MIR TecNM  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Programas_Presupuestarios
-
-- Estado: — (unknown) — Proyectos TecNM  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
-
-- Estado: — (unknown) — Programa Institucional 2025-2030  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
-
-- Estado: — (unknown) — Convocatorias Externas  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas_Academicos
+- Estado: — (open) — Convocatorias SNII  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/snii/convocatorias-snii/
 
 - Estado: — (unknown) — Convocatorias TecNM  
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_TecNM_Academicos
 
+- Estado: — (unknown) — Convocatorias Externas  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Convocatorias_Externas_Academicos
+
+- Estado: — (unknown) — Programas presupuestarios MIR TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programas_Presupuestarios
+
+- Estado: — (unknown) — Programa Institucional 2025-2030  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
+
+- Estado: — (unknown) — Proyectos TecNM  
+  Source: TecNM Convocatorias  
+  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
+
+- Estado: — (open) — Abiertas Ingreso o Permanencia SNII - SECIHTI  
+  Source: Secihti Convocatorias SNII  
+  Link: https://secihti.mx/snii/convocatorias-snii/abiertas-ingreso-o-permanencia-snii/
+
+- Estado: — (open) — Proyectos sin Mediar Convocatoria  
+  Source: Secihti Convocatorias 2026  
+  Link: https://secihti.mx/tecnologias-e-innovacion/proyectos-sin-mediar-convocatoria/
+
 - Estado: — (open) — Convocatorias SNII  
   Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/snii/convocatorias-snii/
-
-- Estado: — (unknown) — Convocatoria Investigación Humanística 2025  
-  Source: Secihti Convocatorias  
-  Link: https://secihti.mx/convocatoria/ciencias-y-humanidades/investigacion-humanistica/convocatoria-investigacion-humanistica-2025/
-
-- Estado: — (unknown) — Reglas de Operación.pdf  
-  Source: COMECYT Convocatorias Artículos Científicos  
-  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/ApoyoInvestigadoresDestacados/2026/Reglas_operacion.pdf
-
-- Estado: — (open) — Convocatoria Sinergia  
-  Source: COMECYT Convocatorias  
-  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Sinergia/2026/CONVOCATORIA%20SINERGIA%202026.pdf
-
-- Estado: — (unknown) — Aviso de privacidad simplificado  
-  Source: COMECYT Convocatorias  
-  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Investigacion_Cientifica/2025/Aviso%20de%20Privacidad%20Simplificado%20para%20el%20manejo%20de%20datos%20personales%20del%20Financiamiento%20de%20la%20convocatoria%20Cient%C3%ADfikas%20Mexiquenses.pdf
-
-- Estado: — (open) — Convocatoria Científikas  
-  Source: COMECYT Convocatorias  
-  Link: https://comecyt.edomex.gob.mx/sites/comecyt.edomex.gob.mx/files/files/Investigacion_Cientifica/2026/OCS.307.2026-CE-CONVOCATORIA%20CIENTIFIKAS%20COMECyT-2.pdf
-
-- Estado: — (unknown) — Apoyo empresarial  
-  Source: COMECYT Convocatorias Artículos Científicos  
-  Link: https://comecyt.edomex.gob.mx/apoyo-empresarial
+  Link: https://enbc.secihti.mx/snii/convocatorias-snii/
