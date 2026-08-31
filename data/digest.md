@@ -1,13 +1,21 @@
 # Calls Digest (auto)
 
-Generated: 2026-08-24T14:42:08.869333+00:00
+Generated: 2026-08-31T19:53:10.556018+00:00
 
 
 ## Recently found
 
-- Estado: — (open) — Convocatorias SNII  
-  Source: Secihti Convocatorias SNII  
-  Link: https://www.secihti.mx/snii/convocatorias-snii/
+- Estado: — (open) — Convocatoria  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/images/papime/2027_papime_convocatoria.pdf
+
+- Estado: — (open) — RUA - Convocatoria  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://registro.rua.unam.mx/guias/convocatoria.pdf
+
+- Estado: — (unknown) — PAPIME - Convocatoria 2027  
+  Source: DGAPA UNAM PAPIME Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/159/155/papime-convocatoria-2027
 
 - Estado: — (unknown) — Recomendaciones para presentar su reporte de avances y solicitud de renovación - Convocatoria 2026 - 1ª Renovación  
   Source: DGAPA UNAM PAPIIT Convocatorias  
@@ -16,6 +24,14 @@ Generated: 2026-08-24T14:42:08.869333+00:00
 - Estado: — (unknown) — Recomendaciones para presentar su informe de avances y solicitud de renovación - Convocatoria 2025 - 2ª Renovación  
   Source: DGAPA UNAM PAPIIT Convocatorias  
   Link: https://dgapa.unam.mx/images/papiit/documentos_recomendaciones/2026_papiit_recomendaciones_presentar_informe_avances_solicitud_renovacion_convocatorias_papiit_2025_papiit_dfg_2025_segunda_renovacion.pdf
+
+- Estado: — (unknown) — PAPIIT - Aviso -INFORME PARCIAL DE AVANCES Y SOLICITUD DE RENOVACIÓN DE PROYECTO - convocatorias PAPIIT 2025 y PAPIIT - DFG 2025  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/124/154/papiit-aviso-informe-parcial-de-avances-y-solicitud-de-renovacion-de-proyecto-convocatorias-papiit-2025-y-papiit-dfg-2025
+
+- Estado: — (unknown) — PAPIIT - Aviso - REPORTE DE AVANCES Y SOLICITUD DE RENOVACIÓN DE PROYECTO - convocatorias PAPIIT 2026 y PAPIIT - DFG 2026  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/161/154/papiit-aviso-reporte-de-avances-y-solicitud-de-renovacion-de-proyecto-convocatorias-papiit-2026-y-papiit-dfg-2026
 
 - Estado: — (unknown) — Convocatorias Desarrollo Tecnológico, Vinculación e Innovación  
   Source: Secihti Convocatorias  
@@ -68,19 +84,3 @@ Generated: 2026-08-24T14:42:08.869333+00:00
 - Estado: — (unknown) — Programa Institucional 2025-2030  
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
-
-- Estado: — (unknown) — Proyectos TecNM  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Proyectos_TecNM
-
-- Estado: — (open) — Abiertas Ingreso o Permanencia SNII - SECIHTI  
-  Source: Secihti Convocatorias SNII  
-  Link: https://secihti.mx/snii/convocatorias-snii/abiertas-ingreso-o-permanencia-snii/
-
-- Estado: — (open) — Proyectos sin Mediar Convocatoria  
-  Source: Secihti Convocatorias 2026  
-  Link: https://secihti.mx/tecnologias-e-innovacion/proyectos-sin-mediar-convocatoria/
-
-- Estado: — (open) — Convocatorias SNII  
-  Source: Secihti Convocatorias SNII  
-  Link: https://enbc.secihti.mx/snii/convocatorias-snii/
