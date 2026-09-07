@@ -1,6 +1,6 @@
 # Calls Digest (auto)
 
-Generated: 2026-08-31T19:53:10.556018+00:00
+Generated: 2026-09-07T18:38:38.756115+00:00
 
 
 ## Recently found
@@ -25,7 +25,11 @@ Generated: 2026-08-31T19:53:10.556018+00:00
   Source: DGAPA UNAM PAPIIT Convocatorias  
   Link: https://dgapa.unam.mx/images/papiit/documentos_recomendaciones/2026_papiit_recomendaciones_presentar_informe_avances_solicitud_renovacion_convocatorias_papiit_2025_papiit_dfg_2025_segunda_renovacion.pdf
 
-- Estado: — (unknown) — PAPIIT - Aviso -INFORME PARCIAL DE AVANCES Y SOLICITUD DE RENOVACIÓN DE PROYECTO - convocatorias PAPIIT 2025 y PAPIIT - DFG 2025  
+- Estado: — (open) — Aviso - Informe Parcial de Avances y Solicitud de Renovación de Proyecto - convocatorias PAPIIT 2025 y PAPIIT - DFG 2025  
+  Source: DGAPA UNAM PAPIIT Convocatorias  
+  Link: https://dgapa.unam.mx/images/papiit/2026_papiit_aviso_informe_parcial_solicitud_renovacion_proyectos_convocatorias_papiit_2025_papiit_dfg_2025.pdf
+
+- Estado: — (unknown) — PAPIIT - Aviso - INFORME PARCIAL DE AVANCES Y SOLICITUD DE RENOVACIÓN DE PROYECTO - convocatorias PAPIIT 2025 y PAPIIT - DFG 2025  
   Source: DGAPA UNAM PAPIIT Convocatorias  
   Link: https://dgapa.unam.mx/index.php/fechas-destacadas/eventodetalle/124/154/papiit-aviso-informe-parcial-de-avances-y-solicitud-de-renovacion-de-proyecto-convocatorias-papiit-2025-y-papiit-dfg-2025
 
@@ -80,7 +84,3 @@ Generated: 2026-08-31T19:53:10.556018+00:00
 - Estado: — (unknown) — Programas presupuestarios MIR TecNM  
   Source: TecNM Convocatorias  
   Link: https://www.tecnm.mx/convocatorias?vista=Programas_Presupuestarios
-
-- Estado: — (unknown) — Programa Institucional 2025-2030  
-  Source: TecNM Convocatorias  
-  Link: https://www.tecnm.mx/convocatorias?vista=Programa_Institucional
