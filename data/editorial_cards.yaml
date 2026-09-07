@@ -1,0 +1,15 @@
+cards:
+  - title: "Felicitaciones a las personas aceptadas en el SNII 2026"
+    category: "Reconocimiento institucional"
+    message: "La Secretaría Académica de Investigación-UIMA felicita a las personas aceptadas en la convocatoria del SNII 2026."
+    source: "SECIHTI"
+    link: "https://secihti.mx/wp-content/uploads/snii/resultados/2026/RESULTADOS_COMISIONES_DICTAMINADORAS_2026.pdf"
+    label: "Ver resultados"
+
+  - title: "TRAB 2026: Diplomado Avanzado de Investigación Estratégica y Desarrollo Científico"
+    category: "Bootcamp para investigadores"
+    message: "Consulte la información disponible del Bootcamp y manténgase atento a la próxima convocatoria."
+    source: "Secretaría Académica de Investigación-UIMA"
+    link: "https://sites.google.com/acatlan.unam.mx/trab2026"
+    label: "Ver información"
+    convocatoria: "https://drive.google.com/file/d/1V4hTT-85tJWjnVOjo6kLQTIYlg98K-Yj/view?usp=sharing"

@@ -34,7 +34,7 @@ keywords:
     - deadline
 
 settings:
-  user_agent: "CallsMonitorBot/1.0 (contact: you@example.com)"
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126.0 Safari/537.36"
   timeout_seconds: 20
   max_items_per_source: 40
   only_keep_days: 365
