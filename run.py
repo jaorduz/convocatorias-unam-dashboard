@@ -492,6 +492,158 @@ def load_email_template(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
+
+def html_escape(value: str) -> str:
+    return (
+        (value or "")
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&#39;")
+    )
+
+
+def digest_markdown_to_cards(markdown_text: str) -> str:
+    lines = [line.rstrip() for line in markdown_text.splitlines()]
+    sections: List[Dict[str, Any]] = []
+    current_section: Optional[Dict[str, Any]] = None
+    current_item: Optional[Dict[str, str]] = None
+
+    def flush_item() -> None:
+        nonlocal current_section, current_item
+        if current_section is not None and current_item is not None:
+            current_section["items"].append(current_item)
+            current_item = None
+
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            continue
+
+        if line.startswith("Generated:") or line.startswith("# Calls Digest (auto)"):
+            continue
+
+        if line.startswith("## "):
+            flush_item()
+            current_section = {"title": line[3:].strip(), "items": []}
+            sections.append(current_section)
+            continue
+
+        if line.startswith("- "):
+            flush_item()
+            if current_section is None:
+                current_section = {"title": "Convocatorias", "items": []}
+                sections.append(current_section)
+
+            current_item = {"title": "", "source": "", "link": "#", "deadline": "Sin fecha", "status": "Sin información"}
+            remainder = line[2:].strip()
+
+            if " — " in remainder:
+                prefix, title = remainder.split(" — ", 1)
+                current_item["title"] = title.strip()
+                prefix = prefix.strip()
+
+                if prefix.startswith("Estado:"):
+                    status_value = prefix.replace("Estado:", "", 1).strip()
+                    if status_value in {"—", "-", ""}:
+                        current_item["status"] = "Sin información"
+                    else:
+                        current_item["status"] = status_value
+                else:
+                    match = re.search(r"([0-9]{4}-[0-9]{2}-[0-9]{2})\s*\(([^)]+)\)", prefix)
+                    if match:
+                        current_item["deadline"] = match.group(1)
+                        current_item["status"] = match.group(2)
+                    else:
+                        if re.match(r"^\d{4}-\d{2}-\d{2}$", prefix):
+                            current_item["deadline"] = prefix
+                        elif "(" in prefix and prefix.endswith(")"):
+                            status_value = prefix[prefix.rfind("(")+1:prefix.rfind(")")]
+                            current_item["status"] = status_value
+            else:
+                current_item["title"] = remainder
+
+            continue
+
+        if line.startswith("  Source: "):
+            if current_item is not None:
+                current_item["source"] = line.replace("  Source: ", "", 1).strip()
+            continue
+
+        if line.startswith("  Link: "):
+            if current_item is not None:
+                current_item["link"] = line.replace("  Link: ", "", 1).strip()
+            continue
+
+        if line.startswith("No items collected yet."):
+            current_section = {"title": "Convocatorias", "items": [{"title": "Todavía no hay convocatorias registradas.", "source": "Sistema", "link": "#", "deadline": "Sin fecha", "status": "Sin información"}]}
+            sections.append(current_section)
+            continue
+
+    flush_item()
+
+    if not sections:
+        return "<p style='margin:0;color:#334e68;line-height:1.6;font-size:14px;'>No hay convocatorias para mostrar.</p>"
+
+    html_parts: List[str] = []
+    for section in sections:
+        title = section.get("title", "").strip()
+        if title:
+            html_parts.append(
+                f"<h3 style='margin:22px 0 12px 0;color:#002855;font-size:16px;line-height:1.4;font-weight:700;'>"
+                f"{html_escape(title)}</h3>"
+            )
+
+        items = section.get("items", [])
+        if not items:
+            continue
+
+        html_parts.append(
+            '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">'
+        )
+
+        for item in items:
+            title_text = item.get("title") or "Sin título"
+            source_text = item.get("source") or "Fuente no disponible"
+            link = item.get("link") or "#"
+            if not link.startswith(("http://", "https://", "mailto:")):
+                link = "#"
+            deadline_text = item.get("deadline") or "Sin fecha"
+            status_text = item.get("status") or "Sin información"
+
+            html_parts.append(
+                """
+                <tr>
+                  <td style="padding:0 0 12px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#ffffff;border:1px solid #E2E8F0;border-radius:12px;">
+                      <tr>
+                        <td style="padding:16px;">
+                          <div style="font-size:16px;font-weight:700;color:#002855;line-height:1.4;">{title}</div>
+                          <div style="margin-top:8px;font-size:12px;color:#475569;line-height:1.5;">{source}</div>
+                          <div style="margin-top:4px;font-size:12px;color:#475569;line-height:1.5;">{deadline} &nbsp;|&nbsp; {status}</div>
+                          <div style="margin-top:12px;">
+                            <a href="{link}" style="display:inline-block;background:#002855;color:#ffffff;text-decoration:none;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:700;line-height:1.4;">Ver convocatoria</a>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                """.format(
+                    title=html_escape(title_text),
+                    source=html_escape(source_text),
+                    deadline=html_escape(deadline_text),
+                    status=html_escape(status_text),
+                    link=html_escape(link),
+                )
+            )
+
+        html_parts.append("</table>")
+
+    return "\n".join(html_parts)
+
+
 def send_email_digest(filepath: str, recipients: list[str]) -> None:
     sender = os.getenv("EMAIL_USER")
     password = os.getenv("EMAIL_PASS")
@@ -502,24 +654,7 @@ def send_email_digest(filepath: str, recipients: list[str]) -> None:
     with open(filepath, "r", encoding="utf-8") as f:
         body_md = f.read()
 
-    # Conversión simple de markdown a HTML básico
-    html_body = body_md
-    html_body = html_body.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    html_body = html_body.replace("\n", "<br>")
-
-    # Ajustes básicos de títulos
-    html_body = html_body.replace(
-        "# Calls Digest (auto)<br>",
-        "<h2 style='margin-bottom:8px;color:#002855;'>Sistema Institucional de Monitoreo de Convocatorias</h2>"
-    )
-    html_body = html_body.replace(
-        "## Upcoming deadlines<br>",
-        "<h3 style='color:#002855;margin-top:24px;'>Próximas fechas límite</h3>"
-    )
-    html_body = html_body.replace(
-        "## Recently found<br>",
-        "<h3 style='color:#002855;margin-top:24px;'>Convocatorias detectadas recientemente</h3>"
-    )
+    html_body = digest_markdown_to_cards(body_md)
 
     template = load_email_template("templates/email_template.html")
 

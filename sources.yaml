@@ -49,19 +49,12 @@ sources:
   - name: "COMECYT Convocatorias"
     type: "html"
     url: "https://comecyt.edomex.gob.mx/fondo-investigacion-cientifica-desarrollo-tecnologico"
-    include_if_url_contains: ["convocatoria","apoyo","beca"]
+    include_if_url_contains: ["convocatoria", "apoyo", "beca", "ciencia", "2026"]
 
-   
-  - name: "COMECYT Convocatorias Artículos Científicos"
+  - name: "COMECYT Convocatoria Ciencia Básica y de Frontera 2026"
     type: "html"
-    url: "https://comecyt.edomex.gob.mx/publicacion-articulos-cientificos"
-    include_if_url_contains: ["convocatoria","apoyo","beca"]
-
-
-  - name: "COMECYT Convocatorias Artículos Científicos"
-    type: "html"
-    url: "https://secihti.mx/capitulo-ciencia-basica-y-de-frontera-2026/"
-    include_if_url_contains: ["Frontera","Ciencia","2026"]
+    url: "https://comecyt.edomex.gob.mx/ciencia-basica-y-de-frontera"
+    include_if_url_contains: ["convocatoria", "frontera", "ciencia", "2026"]
 
 
 
@@ -78,78 +71,55 @@ sources:
     include_if_url_contains: ["programa", "estancias", "cientificas", "pdf", "convocatoria"]
 
 
-  - name: "Canada NSERC Alliance Quantum Grants: Mexico-Canada Research Partnership"
-    type: "html"
-    url: "https://sshrc-crsh.canada.ca/en/funding/opportunities.aspx?utm_content=home"
-    include_if_url_contains: ["solicitation", "award", "deadline"]
-
-
-
-
   - name: "Canada NSERC Alliance Quantum Grants"
     type: "html"
     url: "https://nserc-crsng.canada.ca/en/news/new-funding-available-nsercs-alliance-quantum-grants"
-    include_if_url_contains: ["solicitation", "award", "deadline"]
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "award", "opportunity", "2026"]
 
-
-
-  - name: "Canada NSERC Alliance Quantum Grants: Mexico-Canada Research Partnership"
+  - name: "Canada National Quantum Strategy"
     type: "html"
     url: "https://ised-isde.canada.ca/site/national-quantum-strategy/en/canadas-national-quantum-strategy"
-    include_if_url_contains: ["solicitation", "award", "deadline"]
-
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "award", "opportunity", "quantum"]
 
   - name: "NSERC Funding Opportunities"
     type: "html"
     url: "https://nserc-crsng.canada.ca/en/funding/funding-opportunity?search_api_fulltext=&field_archived=1&field_program_type_unique%5B728%5D=728&field_program_type_unique%5B1090%5D=1090&field_program_type_unique%5B1095%5D=1095"
-    include_if_url_contains: ["solicitation", "award", "deadline"]
-
-
-
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "award", "opportunity"]
 
   - name: "Amazon Research Awards"
     type: "html"
     url: "https://www.amazon.science/research-awards/amazon-security-call-for-proposals-spring-2026"
-    include_if_url_contains: ["solicitation", "award", "deadline"]
-
-
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "award", "opportunity"]
 
   - name: "Wenner-Gren Foundation"
     type: "html"
     url: "https://wennergren.org/"
-    include_if_url_contains: ["solicitation", "funding", "deadline"]
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "opportunity"]
 
   - name: "Mitacs"
     type: "html"
     url: "https://www.mitacs.ca/our-programs/globalink-research-award/"
-    include_if_url_contains: ["solicitation", "award", "deadline"]
-
-
-  - name: "Lupus Research Alliance"
-    type: "html"
-    url: "https://www.lupusresearch.org/for-researchers/funding-opportunities/"
-    include_if_url_contains: ["solicitation", "funding", "deadline"]
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "award", "opportunity"]
 
   - name: "Lupus Research Alliance"
     type: "html"
     url: "https://www.lupusresearch.org/for-researchers/funding-opportunities/"
-    include_if_url_contains: ["solicitation", "funding", "deadline"]
-
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "opportunity"]
 
   - name: "NSF Funding Opportunities"
     type: "html"
     url: "https://www.nsf.gov/funding/opportunities"
-    include_if_url_contains: ["solicitation", "funding", "deadline"]
+    include_if_url_contains: ["convocatoria", "call", "funding", "grant", "deadline", "opportunity"]
 
   - name: "Horizon Europe Funding"
     type: "html"
     url: "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search"
-    include_if_url_contains: ["topic", "call", "deadline"]
+    include_if_url_contains: ["convocatoria", "topic", "call", "deadline", "funding", "grant"]
 
   - name: "NIH Funding"
     type: "html"
     url: "https://grants.nih.gov/grants/guide/index.html"
-    include_if_url_contains: ["notice", "funding", "deadline"]
+    include_if_url_contains: ["convocatoria", "notice", "funding", "deadline", "grant", "opportunity"]
 
     
   - name: "NSF RSS"

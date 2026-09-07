@@ -4,10 +4,21 @@
 
 readmeinternal.md
 
+# shell / agent helper artifacts
+.eval "$(ssh-agent -s)"
+.eval "$(ssh-agent -s)".pub
+**/eval "$(ssh-agent -s)"
+**/eval "$(ssh-agent -s)".pub
+*.pub
+*.key
+*.pem
+*.crt
+*.csr
+*.log
+
+# generated / local data
 data/emailsJstSent.csv
 data/special_recipients.csv
-
-
 data/calls.csv
 data/digest.md
 
