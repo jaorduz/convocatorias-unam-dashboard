@@ -109,13 +109,13 @@ st.markdown(
     }}
 
     .editorial-card {{
-        min-height: 188px;
+        min-height: 220px;
         padding: 20px;
-        border: 1px solid #D8E1EA;
-        border-top: 4px solid var(--editorial-accent);
-        border-radius: 14px;
-        background: var(--editorial-bg);
-        box-shadow: 0 4px 14px rgba(16,42,67,0.06);
+        border: 1px solid rgba(0, 40, 85, 0.12);
+        border-top: 5px solid var(--editorial-accent);
+        border-radius: 16px;
+        background: linear-gradient(180deg, var(--editorial-bg) 0%, rgba(255,255,255,0.94) 100%);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
     }}
 
     .editorial-category {{
@@ -135,10 +135,22 @@ st.markdown(
     }}
 
     .editorial-message {{
-        min-height: 48px;
+        min-height: 54px;
         color: #486581;
         font-size: 14px;
         line-height: 1.55;
+    }}
+
+    .notice-image {{
+        display: block;
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        margin: 12px 0 10px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 40, 85, 0.08);
+        box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
+        background: #edf5ff;
     }}
 
 </style>
@@ -178,21 +190,34 @@ except (FileNotFoundError, AttributeError):
     editorial_cards = []
 
 if editorial_cards:
-    st.markdown("## Información y recursos")
-    st.caption("Reconocimientos, herramientas y materiales seleccionados para fortalecer el trabajo de investigación.")
+    st.markdown("## Avisos")
+    st.caption("Comunicados, recordatorios y materiales relevantes para la comunidad académica.")
     card_columns = st.columns(min(len(editorial_cards), 2))
     for index, card in enumerate(editorial_cards):
         link = str(card.get("link", "")).strip()
-        if not link.startswith(("http://", "https://")):
+        poster = str(card.get("poster", "") or card.get("image", "") or card.get("poster_url", "")).strip()
+        if not link.startswith(("http://", "https://")) and not poster.startswith(("http://", "https://")):
             continue
         is_recognition = "reconocimiento" in str(card.get("category", "")).lower()
         accent = UNAM_GOLD if is_recognition else "#1F5F6B"
         card_background = "#F8F1D8" if is_recognition else "#E5F2F3"
-        category = card.get("category", "Información para investigadores")
-        title = card.get("title", "Información")
+        category = card.get("category", "Aviso")
+        title = card.get("title", "Aviso")
         message = card.get("message", "")
         source = card.get("source", "Fuente oficial")
-        label = card.get("label", "Ver información")
+        label = card.get("label", "Ver aviso")
+        details = str(card.get("details", "")).strip()
+        details_html = (
+            f'<div style="margin-top:10px;color:#374151;font-size:13px;line-height:1.6;">{details}</div>'
+            if details
+            else ""
+        )
+        poster_html = (
+            f'<div style="margin:12px 0 10px 0;"><img src="{poster}" alt="{title}" class="notice-image" /></div>'
+            if poster.startswith(("http://", "https://"))
+            else ""
+        )
+        primary_link = link if link.startswith(("http://", "https://")) else poster
         convocatoria = str(card.get("convocatoria", "")).strip()
         convocatoria_link = (
             f'<a href="{convocatoria}" target="_blank" rel="noopener noreferrer" '
@@ -208,9 +233,11 @@ if editorial_cards:
                     <div class="editorial-category">{category}</div>
                     <div class="editorial-title">{title}</div>
                     <div class="editorial-message">{message}</div>
+                    {poster_html}
+                    {details_html}
                     <div style="margin-top:10px;color:#64748B;font-size:12px;">{source}</div>
                     <div style="margin-top:12px;">
-                        <a href="{link}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-right:8px;padding:9px 13px;border-radius:9px;background:{accent};color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;">{label}</a>
+                        <a href="{primary_link}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-right:8px;padding:9px 13px;border-radius:9px;background:{accent};color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;">{label}</a>
                         {convocatoria_link}
                     </div>
                 </div>

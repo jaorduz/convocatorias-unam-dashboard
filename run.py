@@ -585,14 +585,18 @@ def write_digest(
     def append_editorial_cards() -> None:
         if not editorial_cards:
             return
-        lines.append("## Información y recursos\n")
+        lines.append("## Avisos\n")
         for card in editorial_cards:
+            poster = str(card.get("poster", "") or card.get("image", "") or card.get("poster_url", "")).strip()
+            details = str(card.get("details", "")).strip()
             lines.append(
                 f"- INFO — {card['title']}  \n"
                 f"  Message: {card['message']}  \n"
                 f"  Source: {card['source']}  \n"
-                f"  Link: {card['link']}  \n"
-                f"  Label: {card.get('label', 'Ver información')}\n"
+                f"  Link: {card.get('link', '#')}  \n"
+                f"  Poster: {poster}  \n"
+                f"  Details: {details}  \n"
+                f"  Label: {card.get('label', 'Ver aviso')}\n"
             )
 
     if df.empty:
@@ -751,7 +755,7 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
                 current_section = {"title": "Convocatorias", "items": []}
                 sections.append(current_section)
 
-            current_item = {"title": "", "source": "", "link": "#", "deadline": "Sin fecha", "status": "Sin información", "message": "", "label": "Ver convocatoria", "kind": "call"}
+            current_item = {"title": "", "source": "", "link": "#", "deadline": "Sin fecha", "status": "Sin información", "message": "", "label": "Ver convocatoria", "kind": "call", "poster": "", "details": ""}
             remainder = line[2:].strip()
 
             if " — " in remainder:
@@ -804,6 +808,16 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
                 current_item["link"] = line.replace("Link: ", "", 1).strip()
             continue
 
+        if line.startswith("Poster: "):
+            if current_item is not None:
+                current_item["poster"] = line.replace("Poster: ", "", 1).strip()
+            continue
+
+        if line.startswith("Details: "):
+            if current_item is not None:
+                current_item["details"] = line.replace("Details: ", "", 1).strip()
+            continue
+
         if line.startswith("No items collected yet."):
             current_section = {"title": "Convocatorias", "items": [{"title": "Todavía no hay convocatorias registradas.", "source": "Sistema", "link": "#", "deadline": "Sin fecha", "status": "Sin información"}]}
             sections.append(current_section)
@@ -818,7 +832,7 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
         "México": "section-mexico",
         "Internacionales": "section-internacionales",
         "Investigadores senior": "section-investigadores-senior",
-        "Información y recursos": "section-informacion-recursos",
+        "Avisos": "section-avisos",
     }
     visible_sections = [
         section for section in sections
@@ -835,7 +849,7 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
             "México": "#002855",
             "Internacionales": "#1F5F6B",
             "Investigadores senior": "#8A6D1D",
-            "Información y recursos": "#1F5F6B",
+            "Avisos": "#1F5F6B",
         }.get(section_title, "#002855")
         toc_parts.append(
             f"<a href='#{section_ids[section_title]}' style='display:inline-block;margin:0 12px 4px 0;color:{section_color};text-decoration:none;font-size:13px;font-weight:700;'>{html_escape(section_title)}</a>"
@@ -848,7 +862,7 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
             "México": ("#002855", "#E6EEF8"),
             "Internacionales": ("#1F5F6B", "#E5F2F3"),
             "Investigadores senior": ("#8A6D1D", "#F8F1D8"),
-            "Información y recursos": ("#1F5F6B", "#E5F2F3"),
+            "Avisos": ("#1F5F6B", "#E5F2F3"),
         }
         accent_color, accent_background = section_colors.get(title, ("#002855", "#E6EEF8"))
         if title:
@@ -890,6 +904,18 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
                 else f"<div style='margin-top:4px;font-size:12px;color:#475569;line-height:1.5;'>"
                      f"{html_escape(deadline_text)} &nbsp;|&nbsp; {html_escape(status_text)}</div>"
             )
+            details_text = (item.get("details") or "").strip()
+            poster_url = (item.get("poster") or "").strip()
+            poster_html = (
+                f"<div style='margin-top:12px;'><img src='{html_escape(poster_url)}' alt='{html_escape(title_text)}' style='display:block;width:100%;max-height:220px;object-fit:cover;border-radius:12px;border:1px solid #D8E1EA;box-shadow:0 8px 18px rgba(15,23,42,0.08);' /></div>"
+                if poster_url.startswith(("http://", "https://"))
+                else ""
+            )
+            details_html = (
+                f"<div style='margin-top:10px;font-size:14px;color:#334e68;line-height:1.6;'>{html_escape(details_text)}</div>"
+                if details_text
+                else ""
+            )
 
             html_parts.append(
                                 """
@@ -901,6 +927,8 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
                                                     <div style="font-size:16px;font-weight:700;color:{accent};line-height:1.4;">{title}</div>
                           <div style="margin-top:8px;font-size:12px;color:#475569;line-height:1.5;">{source}</div>
                                                     {metadata}
+                                                    {poster_html}
+                                                    {details_html}
                           <div style="margin-top:12px;">
                                                                                                                 <a href="{link}" style="display:inline-block;background:{accent};color:#ffffff;text-decoration:none;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:700;line-height:1.4;">{label}</a>
                           </div>
@@ -915,6 +943,8 @@ def digest_markdown_to_cards(markdown_text: str) -> str:
                     deadline=html_escape(deadline_text),
                     status=html_escape(status_text),
                     metadata=metadata_html,
+                    poster_html=poster_html,
+                    details_html=details_html,
                     label=html_escape(action_label),
                     link=html_escape(link),
                     accent=accent_color,

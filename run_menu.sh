@@ -81,6 +81,9 @@ show_menu() {
   printf '4) Abrir vista previa del boletín\n'
   printf '5) Enviar boletín a special_recipients.csv\n'
   printf '6) Programar envío semanal\n'
+  printf '7) Agregar aviso\n'
+  printf '8) Editar aviso\n'
+  printf '9) Eliminar aviso\n'
   printf 'q) Salir\n\n'
 }
 
@@ -191,6 +194,202 @@ PY
 
   printf '\nSitio agregado y datos actualizados.\n'
   printf 'Puede usar la opción 3 para revisar el dashboard.\n'
+}
+
+
+add_notice() {
+
+  local title
+  local category
+  local message
+  local source
+  local link
+  local poster
+  local details
+
+  printf '\n=== Agregar aviso ===\n\n'
+
+  read -r -p "Título del aviso: " title
+  read -r -p "Categoría (ej. Reconocimiento, Capacitación, Convocatoria, Evento): " category
+  read -r -p "Descripción o detalle del aviso: " message
+  read -r -p "Fuente o dependencia: " source
+  read -r -p "URL del sitio/web oficial (opcional): " link
+  read -r -p "URL de póster o imagen PNG (opcional): " poster
+  read -r -p "Más detalles o texto extra (opcional): " details
+
+  if [[ -z "$title" || -z "$message" ]]; then
+    printf '\nERROR: Se requieren título y descripción del aviso.\n'
+    return
+  fi
+
+  if [[ -z "$link" && -z "$poster" ]]; then
+    printf '\nERROR: Debe indicar al menos una URL de sitio o un póster/imagen.\n'
+    return
+  fi
+
+  "$PYTHON_BIN" - "$title" "$category" "$message" "$source" "$link" "$poster" "$details" <<'PY'
+
+import sys
+from pathlib import Path
+import yaml
+
+
+title, category, message, source, link, poster, details = sys.argv[1:]
+path = Path("data/editorial_cards.yaml")
+
+data = yaml.safe_load(path.read_text(encoding="utf-8")) if path.exists() else {"cards": []}
+if data is None:
+    data = {"cards": []}
+
+cards = data.setdefault("cards", [])
+
+entry = {
+    "title": title.strip(),
+    "category": category.strip() or "Aviso",
+    "message": message.strip(),
+    "source": source.strip() or "Fuente",
+    "label": "Ver aviso",
+}
+if link.strip():
+    entry["link"] = link.strip()
+if poster.strip():
+    entry["poster"] = poster.strip()
+if details.strip():
+    entry["details"] = details.strip()
+
+cards.append(entry)
+
+path.write_text(
+    yaml.safe_dump(data, allow_unicode=True, sort_keys=False),
+    encoding="utf-8",
+)
+
+print(f"\nAviso agregado correctamente: {title}")
+PY
+
+  printf '\nActualizando datos del dashboard y del boletín...\n'
+
+  "$PYTHON_BIN" run.py
+
+  printf '\nAviso agregado y datos actualizados.\n'
+  printf 'Puede usar la opción 3 para revisar el dashboard y la opción 4 para revisar el boletín.\n'
+}
+
+
+edit_notice() {
+
+  local idx
+
+  if [[ ! -f "data/editorial_cards.yaml" ]]; then
+    printf '\nNo hay avisos registrados aún.\n'
+    return
+  fi
+
+  "$PYTHON_BIN" - <<'PY'
+import yaml
+from pathlib import Path
+
+path = Path('data/editorial_cards.yaml')
+try:
+    data = yaml.safe_load(path.read_text(encoding='utf-8')) or {'cards': []}
+except FileNotFoundError:
+    print('\nNo hay avisos registrados aún.')
+    raise SystemExit(0)
+
+cards = data.get('cards') or []
+if not cards:
+    print('\nNo hay avisos registrados aún.')
+    raise SystemExit(0)
+
+print('\nAvisos actuales:\n')
+for i, card in enumerate(cards, start=1):
+    print(f"{i}) {card.get('title', 'Sin título')} [{card.get('category', 'Aviso')}]")
+
+while True:
+    try:
+        idx = int(input('\nNúmero del aviso a editar: ').strip())
+        if 1 <= idx <= len(cards):
+            break
+        print('Número fuera de rango. Intenta de nuevo.')
+    except ValueError:
+        print('Debes ingresar un número válido.')
+
+card = cards[idx - 1]
+fields = [
+    ('title', 'Título'),
+    ('category', 'Categoría'),
+    ('message', 'Descripción'),
+    ('source', 'Fuente'),
+    ('link', 'URL del sitio'),
+    ('poster', 'URL del póster o imagen'),
+    ('details', 'Detalles adicionales'),
+    ('label', 'Texto del botón'),
+]
+
+for key, label in fields:
+    current = str(card.get(key, '') or '').strip()
+    value = input(f"{label} [{current if current else 'vacío'}]: ").strip()
+    if value:
+        card[key] = value
+
+path.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding='utf-8')
+print(f'\nAviso #{idx} actualizado correctamente.')
+PY
+
+  printf '\nActualizando datos del dashboard y del boletín...\n'
+  "$PYTHON_BIN" run.py
+
+  printf '\nEdición del aviso finalizada.\n'
+}
+
+
+delete_notice() {
+
+  local idx
+
+  if [[ ! -f "data/editorial_cards.yaml" ]]; then
+    printf '\nNo hay avisos registrados aún.\n'
+    return
+  fi
+
+  "$PYTHON_BIN" - <<'PY'
+import yaml
+from pathlib import Path
+
+path = Path('data/editorial_cards.yaml')
+try:
+    data = yaml.safe_load(path.read_text(encoding='utf-8')) or {'cards': []}
+except FileNotFoundError:
+    print('\nNo hay avisos registrados aún.')
+    raise SystemExit(0)
+
+cards = data.get('cards') or []
+if not cards:
+    print('\nNo hay avisos registrados aún.')
+    raise SystemExit(0)
+
+print('\nAvisos actuales:\n')
+for i, card in enumerate(cards, start=1):
+    print(f"{i}) {card.get('title', 'Sin título')} [{card.get('category', 'Aviso')}]")
+
+while True:
+    try:
+        idx = int(input('\nNúmero del aviso a eliminar: ').strip())
+        if 1 <= idx <= len(cards):
+            break
+        print('Número fuera de rango. Intenta de nuevo.')
+    except ValueError:
+        print('Debes ingresar un número válido.')
+
+removed = cards.pop(idx - 1)
+path.write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding='utf-8')
+print(f'\nAviso eliminado: {removed.get("title", "Sin título")}')
+PY
+
+  printf '\nActualizando datos del dashboard y del boletín...\n'
+  "$PYTHON_BIN" run.py
+
+  printf '\nAviso eliminado correctamente.\n'
 }
 
 
@@ -451,6 +650,24 @@ while true; do
     6)
 
       schedule_email
+      ;;
+
+
+    7)
+
+      add_notice
+      ;;
+
+
+    8)
+
+      edit_notice
+      ;;
+
+
+    9)
+
+      delete_notice
       ;;
 
 
