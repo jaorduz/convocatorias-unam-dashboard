@@ -108,6 +108,11 @@ Sistema automatizado para recolectar, normalizar, almacenar y publicar convocato
 - `data/areas_estrategicas.csv`: keywords/pesos por línea estratégica.
 - `data/divisiones_academicas.csv`: mapeo área → división.
 
+## Avisos y recursos
+La opción 7 de `run_menu.sh` agrupa la administración de avisos y recursos. Para agregar, editar o eliminar un elemento, se selecciona el tipo de contenido, la acción y los canales de publicación: dashboard, boletín o ambos.
+
+Los registros nuevos guardan sus canales en `publish_to`, por ejemplo `publish_to: [dashboard, newsletter]`. Los archivos `data/editorial_cards.yaml` y `data/recursos.yaml` que todavía no tienen ese campo se consideran publicados en ambos canales. Para incluir un aviso en el boletín se requiere una URL web; un póster por sí solo no es suficiente.
+
 ## Requisitos
 Python 3.11 recomendado (conda o venv).
 Dependencias en `requirements.txt`.

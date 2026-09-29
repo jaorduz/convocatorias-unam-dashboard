@@ -3,6 +3,8 @@
 .streamlit/secrets.toml
 
 readmeinternal.md
+run.py
+run_menu.sh
 
 # shell / agent helper artifacts
 .eval "$(ssh-agent -s)"
@@ -24,4 +26,5 @@ data/digest.md
 
 .DS_Store
 streamlit.log
+.streamlit_preview.pid
 data/calls.db

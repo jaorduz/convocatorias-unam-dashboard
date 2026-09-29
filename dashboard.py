@@ -8,6 +8,7 @@ import altair as alt
 import streamlit.components.v1 as components
 import yaml
 from dotenv import load_dotenv
+from content_publication import is_published_to
 
 # =========================
 # CONFIGURACIÓN INICIAL
@@ -189,24 +190,56 @@ try:
 except (FileNotFoundError, AttributeError):
     editorial_cards = []
 
-if editorial_cards:
-    st.markdown("## Avisos")
-    st.caption("Comunicados, recordatorios y materiales relevantes para la comunidad académica.")
-    card_columns = st.columns(min(len(editorial_cards), 2))
-    for index, card in enumerate(editorial_cards):
-        link = str(card.get("link", "")).strip()
-        poster = str(card.get("poster", "") or card.get("image", "") or card.get("poster_url", "")).strip()
+try:
+    with open("data/recursos.yaml", "r", encoding="utf-8") as file:
+        resources = yaml.safe_load(file).get("resources", [])
+except (FileNotFoundError, AttributeError):
+    resources = []
+
+# Combine avisos and resources
+all_items = []
+for card in editorial_cards:
+    if not is_published_to(card, "dashboard"):
+        continue
+    card_copy = dict(card)
+    card_copy["item_type"] = "aviso"
+    all_items.append(card_copy)
+
+for resource in resources:
+    if not is_published_to(resource, "dashboard"):
+        continue
+    resource_copy = dict(resource)
+    resource_copy["item_type"] = "recurso"
+    all_items.append(resource_copy)
+
+if all_items:
+    st.markdown("## Avisos e Información y Recursos")
+    st.caption("Comunicados, recordatorios, materiales y recursos relevantes para la comunidad académica.")
+    card_columns = st.columns(min(len(all_items), 2))
+    for index, item in enumerate(all_items):
+        link = str(item.get("link", "")).strip()
+        poster = str(item.get("poster", "") or item.get("image", "") or item.get("poster_url", "")).strip()
         if not link.startswith(("http://", "https://")) and not poster.startswith(("http://", "https://")):
             continue
-        is_recognition = "reconocimiento" in str(card.get("category", "")).lower()
-        accent = UNAM_GOLD if is_recognition else "#1F5F6B"
-        card_background = "#F8F1D8" if is_recognition else "#E5F2F3"
-        category = card.get("category", "Aviso")
-        title = card.get("title", "Aviso")
-        message = card.get("message", "")
-        source = card.get("source", "Fuente oficial")
-        label = card.get("label", "Ver aviso")
-        details = str(card.get("details", "")).strip()
+        
+        item_type = item.get("item_type", "aviso")
+        
+        # Determine styling based on item type
+        if item_type == "recurso":
+            accent = "#6366F1"  # Indigo for resources
+            card_background = "#E0E7FF"
+            type_label = "RECURSO"
+        else:
+            is_recognition = "reconocimiento" in str(item.get("category", "")).lower()
+            accent = UNAM_GOLD if is_recognition else "#1F5F6B"
+            card_background = "#F8F1D8" if is_recognition else "#E5F2F3"
+            type_label = item.get("category", "Aviso")
+        
+        title = item.get("title", "Aviso")
+        message = item.get("message", "")
+        source = item.get("source", "Fuente oficial")
+        label = item.get("label", "Ver" if item_type == "recurso" else "Ver aviso")
+        details = str(item.get("details", "")).strip()
         details_html = (
             f'<div style="margin-top:10px;color:#374151;font-size:13px;line-height:1.6;">{details}</div>'
             if details
@@ -218,7 +251,7 @@ if editorial_cards:
             else ""
         )
         primary_link = link if link.startswith(("http://", "https://")) else poster
-        convocatoria = str(card.get("convocatoria", "")).strip()
+        convocatoria = str(item.get("convocatoria", "")).strip()
         convocatoria_link = (
             f'<a href="{convocatoria}" target="_blank" rel="noopener noreferrer" '
             'style="display:inline-block;padding:9px 13px;border-radius:9px;background:#E6EEF8;'
@@ -230,7 +263,7 @@ if editorial_cards:
             st.html(
                 f"""
                 <div class="editorial-card" style="--editorial-accent:{accent};--editorial-bg:{card_background};">
-                    <div class="editorial-category">{category}</div>
+                    <div class="editorial-category">{type_label}</div>
                     <div class="editorial-title">{title}</div>
                     <div class="editorial-message">{message}</div>
                     {poster_html}
@@ -243,6 +276,7 @@ if editorial_cards:
                 </div>
                 """,
             )
+
 
 # =========================
 # BUSCADOR

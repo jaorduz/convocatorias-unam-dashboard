@@ -1,15 +1,16 @@
 cards:
-  - title: "Felicitaciones a las personas aceptadas en el SNII 2026"
-    category: "Reconocimiento institucional"
-    message: "La Secretaría Académica de Investigación-UIMA felicita a las personas aceptadas en la convocatoria del SNII 2026."
-    source: "SECIHTI"
-    link: "https://secihti.mx/wp-content/uploads/snii/resultados/2026/RESULTADOS_COMISIONES_DICTAMINADORAS_2026.pdf"
-    label: "Ver resultados"
-
-  - title: "TRAB 2026: Diplomado Avanzado de Investigación Estratégica y Desarrollo Científico"
-    category: "Bootcamp para investigadores"
-    message: "Consulte la información disponible del Bootcamp y manténgase atento a la próxima convocatoria."
-    source: "Secretaría Académica de Investigación-UIMA"
-    link: "https://sites.google.com/acatlan.unam.mx/trab2026"
-    label: "Ver información"
-    convocatoria: "https://drive.google.com/file/d/1V4hTT-85tJWjnVOjo6kLQTIYlg98K-Yj/view?usp=sharing"
+- title: SIIMEX
+  category: investigacion, premio, convocatoria, EDOMEX
+  message: Conecta con personas investigadoras e innovadoras, arma alianzas y construye
+    conocimiento nuevo. La plataforma oficial para la gestión y seguimiento de personas
+    investigadoras e innovadoras.
+  source: COMECyT
+  label: Ver Convocatoria
+  link: https://siimex_comecyt.edomex.gob.mx
+  poster: https://siimex_comecyt.edomex.gob.mx/assets/img/logo.png
+  details: El SIIMEX tiene como objetivo integrar, reconocer y fortalecer a las personas
+    que realizan actividades de investigación científica, desarrollo tecnológico e
+    innovación en el Estado de México.
+  publish_to:
+  - dashboard
+  - newsletter
