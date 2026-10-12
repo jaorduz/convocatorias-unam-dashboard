@@ -1,16 +1,14 @@
 cards:
-- title: SIIMEX
-  category: investigacion, premio, convocatoria, EDOMEX
-  message: Conecta con personas investigadoras e innovadoras, arma alianzas y construye
-    conocimiento nuevo. La plataforma oficial para la gestión y seguimiento de personas
-    investigadoras e innovadoras.
-  source: COMECyT
-  label: Ver Convocatoria
-  link: https://siimex_comecyt.edomex.gob.mx
-  poster: https://siimex_comecyt.edomex.gob.mx/assets/img/logo.png
-  details: El SIIMEX tiene como objetivo integrar, reconocer y fortalecer a las personas
-    que realizan actividades de investigación científica, desarrollo tecnológico e
-    innovación en el Estado de México.
+- title: Nobel Prizes 2026
+  category: Reconocimie
+  message: Between 1901 and 2026, the Nobel Prizes and the Sveriges Riksbank Prize
+    in Economic Sciences in Memory of Alfred Nobel were awarded 639 times to 1,036
+    people and organisations. With some receiving the Nobel Prize more than once,
+    this makes a total of 1,000 individuals and 28 organisations. Below, you can view
+    the full list of Nobel Prizes and Nobel Prize laureates.
+  source: The Nobel Prize
+  label: Ver aviso
   publish_to:
   - dashboard
   - newsletter
+  link: https://www.nobelprize.org/all-nobel-prizes-2026/
