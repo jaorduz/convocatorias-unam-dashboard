@@ -1,1 +1,15 @@
-resources: []
+resources:
+- title: 'YPP Exam: Development and Sustainability'
+  type: Professional career, international, economic, social and development
+  message: Candidates who successfully complete the Young Professionals Programme
+    (YPP) examination process will be placed on a roster used to fill appropriate
+    vacancies. Candidates may be selected from the roster as relevant vacancies become
+    available across the UN Secretariat. The roster is valid and used to fill positions,
+    for a period of three years. It is important to understand that placement on the
+    roster does not guarantee an offer of employment.
+  source: United Nations
+  link: https://careers.un.org/jobSearchDescription/285586?language=en&lt_utm_source=lt_admin_share_link
+  label: Ver recurso
+  publish_to:
+  - dashboard
+  - newsletter
