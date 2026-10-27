@@ -13,3 +13,33 @@ resources:
   publish_to:
   - dashboard
   - newsletter
+- title: De Jargonizer
+  type: herramienta, AI, Science, training
+  message: Herramienta  diseñada para identificar el uso de lenguaje técnico y especializado
+    en textos científicos y académicos.
+  source: https://scienceandpublic.com/
+  link: https://scienceandpublic.com/
+  label: Ver recurso
+  publish_to:
+  - newsletter
+- title: CORDIS
+  type: herramienta, sciencia, EU
+  message: CORDIS Collaboration Network es una herramienta interactiva de la Comisión
+    Europea que permite explorar y visualizar redes de colaboración entre instituciones,
+    organizaciones e investigadores que participan en proyectos de investigación e
+    innovación financiados por la Unión Europea.
+  source: EU
+  link: https://cordis.europa.eu/datalab/visualisations/vis.php
+  label: Ver recurso
+  publish_to:
+  - newsletter
+- title: 'XKCD: Webcomic'
+  type: science, comics
+  message: xkcd es una plataforma de divulgación científica y humor creada por Randall
+    Munroe, que presenta historietas sobre matemáticas, física, computación, tecnología
+    y situaciones de la vida cotidiana.
+  source: XKCD
+  link: https://xkcd.com
+  label: Ver recurso
+  publish_to:
+  - newsletter

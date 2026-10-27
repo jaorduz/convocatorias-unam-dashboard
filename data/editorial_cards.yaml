@@ -1,16 +1,13 @@
 cards:
 - title: Calaverita Normalizada
-  category: Evento, concurso
-  message: ¡La ciencia, las matemáticas y la computación también se escriben en verso!
-  source: La FES Acatlán de la UNAM te invita a participar en el 5.º Concurso de Calaveritas
-    Literarias, bajo la temática “Calaverita Normalizada”. Pon a prueba tu creatividad
-    y combina el humor, la tradición del Día de Muertos y tu pasión por las ciencias,
-    las matemáticas, la ingeniería y la computación.https://drive.google.com/file/d/16Mz6FVLd4iRhlyxKJGCsRVUz5qvui2_d/view
+  category: Evento, concurso, competencia, cultura, ciencia
+  message: ¡Que las matemáticas, el ingenio y la tradición se encuentren en versos
+    llenos de creatividad!
+  source: División de Matemáticas e Ingeniería, UIMA, FES Acatlán.
   label: Clic para participar
   publish_to:
   - dashboard
   - newsletter
-  link: https://drive.google.com/file/d/1ibN5-8W7HCYuL8R9n8Cm3g0gUtID2Kyo/view
-  poster: https://drive.google.com/file/d/1ibN5-8W7HCYuL8R9n8Cm3g0gUtID2Kyo/view
-  details: ¡Que la creatividad y el ingenio científico cobren vida entre versos y
-    calaveritas!
+  link: https://mac.acatlan.unam.mx/media/avisos/2026/10/ConcursoCalaveritasLite.jpeg
+  poster: https://mac.acatlan.unam.mx/media/avisos/2026/10/ConcursoCalaveritasLite.jpeg
+  details: 'Pon a prueba tu imaginación, combina el humor con la creatividad y dale un toque matemático a una de nuestras tradiciones más representativas.'
