@@ -1,13 +1,13 @@
 cards:
-- title: Calaverita Normalizada
+- title: Calaverita Normalizada (Finalizado)
   category: Evento, concurso, cultura, ciencia
   message: ¡Que las matemáticas, el ingenio y la tradición se encuentren en versos
     llenos de creatividad!
   source: División de Matemáticas e Ingeniería, UIMA, FES Acatlán.
-  label: Clic para participar
+  label: Consulta las calaveritas
   publish_to:
   - dashboard
   - newsletter
-  link: https://mac.acatlan.unam.mx/media/avisos/2026/10/ConcursoCalaveritasLite.jpeg
-  poster: https://mac.acatlan.unam.mx/media/avisos/2026/10/ConcursoCalaveritasLite.jpeg
-  details: 'Pon a prueba tu imaginación, combina el humor con la creatividad y dale un toque matemático a una de nuestras tradiciones más representativas.'
+  link: https://drive.google.com/drive/folders/191Xa5_l4hw7dbQDv898VpcxwaICznUi3?usp=drive_link
+  poster: 
+  details: 'Concurso finalizado. Agradecemos su participación y muchas felicidades a las y los ganadores.'
